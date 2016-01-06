@@ -38,7 +38,8 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">La Auténtica </div>
+                <h3> próximamente...</h3>
             </div>
         </div>
     </body>
