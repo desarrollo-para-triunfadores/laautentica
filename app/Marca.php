@@ -46,14 +46,4 @@ class Marca extends Model implements SluggableInterface
             } 
         
     }
-
-    public function scopeSearchActivos($query, $name)
-    {
-           if ($name == 'activo')
-            {
-                return $query->where('estado', '>', "1");
-            } else {
-               return $query->where('estado', '<', "1");
-            }      
-    }
 }

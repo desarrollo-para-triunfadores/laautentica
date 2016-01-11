@@ -40,4 +40,14 @@ class Producto extends Model
             } 
         
     }
+
+    public function scopeSearchMacas($query, $idMarca)
+    {           
+        if ($idMarca == null)
+            {
+               return $query;
+            } else {
+               return $query->where('marca_id', 'LIKE', $idMarca);
+            } 
+    }
 }
