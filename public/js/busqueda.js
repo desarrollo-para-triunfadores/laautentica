@@ -31,6 +31,7 @@ $(document).on('click', '.input-icon a', function (e){
 	e.preventDefault();
 	var name = $('#input-filtro').val();
 	var page = $(this).attr('href').split('page=')[1];
+	alert(name);
 	$.ajax({
 		url:route,
 		data:{page: page,
@@ -38,6 +39,7 @@ $(document).on('click', '.input-icon a', function (e){
 		type: 'GET',
 		dataType: 'json',
 		success: function(data){
+			alert("data");
 			$(".page-content").html(data);
 			$('#input-filtro').select();
 		}

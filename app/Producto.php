@@ -35,19 +35,49 @@ class Producto extends Model
         if ($name == null)
             {
                return $query;
-            } else {
+            } else {                
                return $query->where('nombre', 'LIKE', $name);
             } 
         
     }
 
-    public function scopeSearchMacas($query, $idMarca)
+    public function scopeSearchMarcas($query, $idMarca)
     {           
         if ($idMarca == null)
             {
                return $query;
             } else {
                return $query->where('marca_id', 'LIKE', $idMarca);
+            } 
+    }
+
+    public function scopeSearchEstado($query, $estado)
+    {           
+        if ($estado == null)
+            {
+               return $query;
+            } else {
+               return $query->where('estado', 'LIKE', $estado);
+            } 
+    }
+
+    public function scopeSearchTipo($query, $idTipo)
+    {           
+        if ($idTipo == null)
+            {
+               return $query;
+            } else {
+               return $query->where('tipoproducto_id', 'LIKE', $idTipo);
+            } 
+    }
+
+    public function scopeSearchOrigen($query, $idOrigen)
+    {           
+        if ($idOrigen == null)
+            {
+               return $query;
+            } else {
+               return $query->where('localidad_id', 'LIKE', $idOrigen);
             } 
     }
 }

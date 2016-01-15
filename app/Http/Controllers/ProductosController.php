@@ -43,7 +43,8 @@ class ProductosController extends Controller
         $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
         $tipos = Tipoproducto::orderBy('nombreTipo','ASC')->lists('nombreTipo','id');
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('admin.productos.tabla',compact('productos'))->render());
+            return response()->json(view('admin.productos.tabla',compact('productos'),
+                compact('marcas'),compact('localidades'),compact('tipos'))->render());
         }
         return view('admin.productos.index')
             ->with('marcas',$marcas)
@@ -128,7 +129,7 @@ class ProductosController extends Controller
     public function update(ProductoRequestEdit $request, $id)
     {
         if ($request->file('imagen'))
-        {                  
+        {                 
             $logo_producto = $this->producto->logo_producto;
             $file = $request->file('imagen');        
             $nombreImagen = 'laAutentica_' . time() . '.' . $file->getClientOriginalExtension();            
@@ -140,8 +141,11 @@ class ProductosController extends Controller
             $logo_producto->save();           
             Storage::disk('productos')->put($nombreImagen, \File::get($file));  // Movemos la imagen nueva al directorio /imagenes/productos   
         }  
-
         $this->producto->fill($request->all());
+        if ($request->estado == null)
+        {
+            $this->producto->estado = 0;
+        } 
         $this->producto->save();     
         Flash::success("Se ha realizado la actualización del registro: ".$this->producto->nombre.".");
         return redirect()->route('admin.productos.show', $id);
