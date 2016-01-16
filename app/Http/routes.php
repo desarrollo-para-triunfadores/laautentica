@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/marcas/baggio', function () {
+    return view('front.partes.baggio');
+});
+
+Route::get('/inicio', function () {
+    return view('front.partes.index');
+});
+
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('usuarios','UsersController');
    Route::resource('paises','PaisesController');
@@ -26,6 +35,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('marcas','MarcasController');
    Route::resource('productos','ProductosController');
    Route::resource('mail','MailController');
+
+
 
    Route::PUT('usuario/{usuarios}', [
     'uses' => 'UsersController@actPass',

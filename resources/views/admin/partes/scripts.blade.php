@@ -14,7 +14,7 @@
 <script src="{{ asset('plantillas/KAdmin-Dark/script/icheck.min.js') }}"></script>
 <script src="{{ asset('plantillas/KAdmin-Dark/script/custom.min.js') }}"></script>
 <script src="{{ asset('plantillas/KAdmin-Dark/script/jquery.news-ticker.js') }}"></script>
-<script src="{{ asset('plantillas/KAdmin-Dark/script/jquery.menu.js') }}"></script>
+<script src="{{ asset('plantillas/KAdmin-Dark/script/jquery.menu.js') }}"> </script>
 <script src="{{ asset('plantillas/KAdmin-Dark/script/pace.min.js') }}"></script>
 <script src="{{ asset('plantillas/KAdmin-Dark/script/holder.js')}}"></script>
 <script src="{{ asset('plantillas/KAdmin-Dark/script/responsive-tabs.js') }}"></script>
