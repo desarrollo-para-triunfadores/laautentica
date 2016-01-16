@@ -18,12 +18,9 @@ class ProductoComposer {
         $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
         $tipos = Tipoproducto::orderBy('nombreTipo','ASC')->lists('nombreTipo','id');
 
-$array_numerico_indexado = array(1, "dos", 3, "cuatro");
-        array_push($array_numerico_indexado, 5, "seis");
-
-        $view->with('marcas',$array_numerico_indexado)
-            ->with('localidades', $localidades)
-            ->with('tipos', $tipos);
+        $view->with('marcas',json_decode($marcas, true))
+            ->with('localidades', json_decode($localidades, true))
+            ->with('tipos', json_decode($tipos, true));
     }
 
 }
