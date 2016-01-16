@@ -23,6 +23,7 @@ Route::get('/inicio', function () {
     return view('front.partes.index');
 });
 
+Route::resource('/productos','frontProductosController');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('usuarios','UsersController');

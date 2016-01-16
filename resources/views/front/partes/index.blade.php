@@ -11,7 +11,6 @@
 	</head>
 	
 	<body>
-	@include('front.partes.scripts')
 
 		<header class="top-header">
 			<div class="container">
@@ -128,7 +127,7 @@
 			<div class="content-block" id="portfolio">
 				<div class="container portfolio-sec">
 					<header class="block-heading cleafix">
-						<a href="#" class="btn btn-o btn-lg pull-right">Ver todas</a>
+						<a href="{{ route('productos.index') }}" class="btn btn-o btn-lg pull-right">Ver todas</a>
 						<div class="title-page">
 							<p class="main-header">Marcas </p>
 						    <p class="sub-header">Heche un vistazo a las marcas con las que trabajamos</p>
@@ -393,6 +392,6 @@
 			</div><!-- #footer -->
 
 		</div><!--/#wrapper-->
-
+	@include('front.partes.scripts')
 	</body>
 </html>
