@@ -24,7 +24,7 @@
                                 <td>{{ $producto->nombre }}</td>   
                                 <td>{{ $producto->marca->nombre }}</td> 
                                 <td>{{ $producto->tipoproducto->nombreTipo }}</td> 
-                                <td>{{ $producto->localidad->nombre }} ({{ $producto->localidad->provincia->pais->nombre }})</td> 
+                                <td>{{ $producto->localidad->nombre }} ({{ $producto->localidad->provincia->nombre }}, {{ $producto->localidad->provincia->pais->nombre }})</td> 
                                  @if ($producto->estado)
                                    <td>Activo   <span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span></td> 
                                 @else

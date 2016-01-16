@@ -54,7 +54,7 @@
                         <br>
                         <hr/>
                         <br>                                     
-                        {!! Form::submit('Registrar Empresa', ['class' => 'btn btn-green btn-block']) !!}  
+                        {!! Form::submit('Registrar Producto', ['class' => 'btn btn-green btn-block']) !!}  
                         <button type="button" data-dismiss="modal" class="btn btn-white btn-block">
                     Cerrar</button>                        
                 {!! Form::close() !!}

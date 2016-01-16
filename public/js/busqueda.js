@@ -12,7 +12,6 @@ $(document).ready(function () {
 
 $(document).on('click', '.input-icon a', function (e){
 	e.preventDefault();
-	alert("mandando");
 	enviar();
 });
 
@@ -32,37 +31,32 @@ $(document).keypress(function(e)
    }
 });
 
-function cambiarVista()
-{
-	if ($('#tab-lista').hasClass('hide')){
-		
-    }else{
-     	
-    }
-}
-
 function cambiarVista(vista)
 {	
 	if (vista == 2)
 	{	
 		$('#tab-lista').removeClass("hide"); 
 		$('#tab-logos').addClass("hide");
+		$('#bot-mostrar').addClass("hide");
+		$('#busqueda').addClass("hide");
+     	$('#bot-buscar').html(" Mostrar filtros");
 	}
 	else 
 	{
      	$('#tab-logos').removeClass("hide");
-		$('#tab-lista').addClass("hide");
+     	$('#bot-mostrar').removeClass("hide");
+		$('#tab-lista').addClass("hide");		
 	}
 }
 
 function ocultarBusqueda()
 {
 	if ($('#busqueda').hasClass('hide')){
-		$('#vv').html(" Ocultar Filtros");
+		$('#bot-buscar').html(" Ocultar Filtros");
    		$('#busqueda').removeClass("hide");
     }else{
      	$('#busqueda').addClass("hide");
-     	$('#vv').html(" Mostrar filtros");
+     	$('#bot-buscar').html(" Mostrar filtros");
     }
 }
 

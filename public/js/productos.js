@@ -1,7 +1,6 @@
 
 function enviar ()
-{
-	alert("llegue");
+{	
 	$.ajax({
 		url:route,
 		data:{

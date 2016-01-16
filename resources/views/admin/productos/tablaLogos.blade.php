@@ -1,4 +1,4 @@
-<div id="tab-logos" class="tablaResultados col-lg-12">
+<div id="tab-logos" class="col-lg-12">
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-yellow">
@@ -21,10 +21,10 @@
                                     <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>{{ $producto->nombre }}</h3></a>                                                
                                         <p> <h4>Marca: {{ $producto->marca->nombre }}</h4> </p> 
                                         @if ($producto->estado)
-                                            <p> Estado: Activo - Origen: {{ $producto->localidad->provincia->pais->nombre }}</p> 
+                                             <p> <span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 
                                         @else
-                                            <p> Estado: Inactivo - Origen: {{ $producto->localidad->provincia->pais->nombre }}</p>                                                  
-                                        @endif 
+                                             <p> <span class="label label-warning"><i class="fa fa-exclamation-triangle"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 
+                                        @endif  
                                         <p></p>                                                    
                                     </div>
                                 </div>
@@ -33,9 +33,9 @@
                                     <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>{{ $producto->nombre }}</h3></a>                                                                                                 
                                         <p> <h4>Marca: {{ $producto->marca->nombre }}</h4> </p> 
                                         @if ($producto->estado)
-                                            <p> Estado: Activo - Origen: {{ $producto->localidad->provincia->pais->nombre }}</p> 
+                                             <p> <span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 
                                         @else
-                                            <p> Estado: Inactivo - Origen: {{ $producto->localidad->provincia->pais->nombre }}</p>                                                  
+                                             <p> <span class="label label-warning"><i class="fa fa-exclamation-triangle"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 
                                         @endif 
                                         <p></p>                                                                                                                                                                                                           
                                     </div>

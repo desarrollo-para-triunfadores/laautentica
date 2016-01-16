@@ -38,8 +38,10 @@
                         </div>
                     </div>                                
                 </div>
-                @include('admin.productos.cabeceraTabla')                                                            
-                @include('admin.productos.tablaLogos')
+                @include('admin.productos.cabeceraTabla')   
+                <div class="tablaResultados">
+                    @include('admin.productos.tablaLogos')
+                </div>                                                                       
                 @include('admin.productos.tablaRegistros')
             </div>
          </div>        
