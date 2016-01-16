@@ -153,6 +153,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
 
         App\Providers\ValidatorServiceProvider::class,
+        App\Providers\ComposerServiceProvider::class,
     ],
 
     /*

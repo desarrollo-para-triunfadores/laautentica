@@ -43,7 +43,7 @@ class Producto extends Model
 
     public function scopeSearchMarcas($query, $idMarca)
     {           
-        if ($idMarca == null)
+        if ($idMarca == "-1")
             {
                return $query;
             } else {
@@ -53,7 +53,7 @@ class Producto extends Model
 
     public function scopeSearchEstado($query, $estado)
     {           
-        if ($estado == null)
+        if ($estado == "-1")
             {
                return $query;
             } else {
@@ -63,7 +63,7 @@ class Producto extends Model
 
     public function scopeSearchTipo($query, $idTipo)
     {           
-        if ($idTipo == null)
+        if ($idTipo == "-1")
             {
                return $query;
             } else {
@@ -73,7 +73,7 @@ class Producto extends Model
 
     public function scopeSearchOrigen($query, $idOrigen)
     {           
-        if ($idOrigen == null)
+        if ($idOrigen == "-1")
             {
                return $query;
             } else {

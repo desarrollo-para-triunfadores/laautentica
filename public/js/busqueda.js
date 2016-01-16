@@ -1,5 +1,4 @@
-$(document).ready(function () {
-    $('#tab-general2').hide();     
+$(document).ready(function () {  
     constructorTabla();
     constructorSelect();
     $("#"+listSidebar).addClass("active");
@@ -9,64 +8,61 @@ $(document).ready(function () {
 });
 
 
-//Páginación en la tabla
-
-$(document).on('click','.pagination a', function (e){
-	e.preventDefault();
-	var page = $(this).attr('href').split('page=')[1];
-	$.ajax({
-		url:route,
-		data:{page: page},
-		type: 'GET',
-		dataType: 'json',
-		success: function(data){
-			$(".page-content").html(data);
-		}
-	});
-});
-
 //Paginación desde el cajón de búsqueda
 
 $(document).on('click', '.input-icon a', function (e){
 	e.preventDefault();
-	var name = $('#input-filtro').val();
-	var page = $(this).attr('href').split('page=')[1];
-	alert(name);
-	$.ajax({
-		url:route,
-		data:{page: page,
-			name: name},
-		type: 'GET',
-		dataType: 'json',
-		success: function(data){
-			alert("data");
-			$(".page-content").html(data);
-			$('#input-filtro').select();
-		}
-	});
+	alert("mandando");
+	enviar();
 });
 
 
 //Paginación desde el cajón de búsqueda presionando enter
 
+function lanzar()
+{
+	$('.input-icon a').click();
+}
+
 $(document).keypress(function(e) 
 {
    if(e.which == 13) 
    {
-      $('.input-icon a').click();
+      lanzar();
    }
 });
 
-function cambiarVista(vista)
+function cambiarVista()
 {
+	if ($('#tab-lista').hasClass('hide')){
+		
+    }else{
+     	
+    }
+}
+
+function cambiarVista(vista)
+{	
 	if (vista == 2)
-	{
-		$('#tab-general').hide(); //oculto mediante id
-	    $('#tab-general2').show(); 
+	{	
+		$('#tab-lista').removeClass("hide"); 
+		$('#tab-logos').addClass("hide");
 	}
 	else 
 	{
-		$('#tab-general2').hide(); //oculto mediante id
-	    $('#tab-general').show(); 
+     	$('#tab-logos').removeClass("hide");
+		$('#tab-lista').addClass("hide");
 	}
 }
+
+function ocultarBusqueda()
+{
+	if ($('#busqueda').hasClass('hide')){
+		$('#vv').html(" Ocultar Filtros");
+   		$('#busqueda').removeClass("hide");
+    }else{
+     	$('#busqueda').addClass("hide");
+     	$('#vv').html(" Mostrar filtros");
+    }
+}
+

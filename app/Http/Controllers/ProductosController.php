@@ -38,18 +38,18 @@ class ProductosController extends Controller
      */
     public function index(Request $request)
     {
-        $productos = Producto::searchNombres($request->name)->orderBy('id','ASC')->paginate(12);
-        $marcas = Marca::orderBy('nombre','ASC')->lists('nombre','id');
-        $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
-        $tipos = Tipoproducto::orderBy('nombreTipo','ASC')->lists('nombreTipo','id');
+        $productos = Producto::searchNombres($request->nombre)
+        ->searchMarcas($request->idmarca)
+        ->searchEstado($request->estado)
+        ->searchTipo($request->idtipo)
+        ->searchOrigen($request->idorigen)
+        ->orderBy('nombre','ASC')
+        ->paginate();
+    
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('admin.productos.tabla',compact('productos'),
-                compact('marcas'),compact('localidades'),compact('tipos'))->render());
+            return response()->json(view('admin.productos.tablaLogos',compact('productos'))->render());
         }
-        return view('admin.productos.index')
-            ->with('marcas',$marcas)
-            ->with('localidades', $localidades)
-            ->with('tipos', $tipos)
+        return view('admin.productos.index')            
             ->with('productos',$productos);
     }
 
