@@ -40,4 +40,24 @@ class Empresa extends Model
             } 
         
     }
+
+    public function scopeSearchRubro($query, $idrubro)
+    {           
+        if ($idrubro == "-1")
+            {
+               return $query;
+            } else {
+               return $query->where('rubro_id', 'LIKE', $idrubro);
+            } 
+    }
+
+    public function scopeSearchOrigen($query, $idOrigen)
+    {           
+        if ($idOrigen == "-1")
+            {
+               return $query;
+            } else {
+               return $query->where('localidad_id', 'LIKE', $idOrigen);
+            } 
+    }
 }

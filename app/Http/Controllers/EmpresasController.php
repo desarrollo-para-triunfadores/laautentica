@@ -6,9 +6,7 @@ use Illuminate\Http\Request;
 use Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Localidad;
 use App\Empresa;
-use App\Rubro;
 use App\Logo_Empresa;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\EmpresaRequestCreate;
@@ -36,16 +34,15 @@ class EmpresasController extends Controller
      */
     public function index(Request $request)
     {
-        $empresas = Empresa::searchNombres($request->name)->orderBy('id','ASC')->paginate(12);
-        $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
-        $rubros = Rubro::orderBy('nombre','ASC')->lists('nombre','id');
+        $empresas = Empresa::searchNombres($request->nombre)
+        ->searchOrigen($request->idorigen)
+        ->searchRubro($request->idrubro)
+        ->orderBy('id','ASC')
+        ->paginate();
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('admin.empresas.tabla',compact('empresas'))->render());
+            return response()->json(view('admin.empresas.tablaLogos',compact('empresas'))->render());
         }
-        return view('admin.empresas.index')
-            ->with('empresas',$empresas)
-            ->with('localidades', $localidades)
-            ->with('rubros', $rubros);        
+        return view('admin.empresas.index')->with('empresas',$empresas);        
     }
 
     /**
@@ -55,7 +52,6 @@ class EmpresasController extends Controller
      */
     public function create()
     {
-        return view('admin.empresas.create');
     }
 
     /**
@@ -96,12 +92,7 @@ class EmpresasController extends Controller
      */
     public function show($id)
     {
-        $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
-        $rubros = Rubro::orderBy('nombre','ASC')->lists('nombre','id');        
-        return view('admin.empresas.show')
-            ->with('localidades', $localidades)
-            ->with('rubros', $rubros)
-            ->with('empresa', $this->empresa);
+        return view('admin.empresas.show')->with('empresa', $this->empresa);
     }
 
     /**

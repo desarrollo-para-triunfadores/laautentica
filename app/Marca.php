@@ -36,14 +36,34 @@ class Marca extends Model implements SluggableInterface
         return $this->hasOne('App\Logo_Marca');
     }
 
-    public function scopeSearchNombres($query, $name)
+    public function scopeSearchNombres($query, $nombre)
     {           
-        if ($name == null)
+        if ($nombre == null)
             {
                return $query;
             } else {
-               return $query->where('nombre', 'LIKE', $name);
+               return $query->where('nombre', 'LIKE', $nombre);
             } 
         
+    }
+
+    public function scopeSearchEstado($query, $estado)
+    {           
+        if ($estado == "-1")
+            {
+               return $query;
+            } else {
+               return $query->where('estado', 'LIKE', $estado);
+            } 
+    }
+
+    public function scopeSearchEmpresa($query, $idempresa)
+    {           
+        if ($idempresa == "-1")
+            {
+               return $query;
+            } else {
+               return $query->where('empresa_id', 'LIKE', $idempresa);
+            } 
     }
 }

@@ -19,8 +19,8 @@
         <div class="page-header pull-right">
             <div class="page-toolbar">
                 <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" data-placement="bottom" title="Visualizar los registros con sus logos. Desde esta vista podrá realizar una búsqueda de un registro únicamente por nombre." data-hover="tooltip"onclick="cambiarVista(1)" class="btn btn-blue"><i class="fa fa-picture-o"> Logos</i></button>
-                <button type="button" data-placement="bottom" title="Visualizar los registros en forma de lista. Desde esta vista podrá realizar una búsqueda mas especializada desde el cajón de búscquedas haciendo uso de cualquier término que que conforme algún campo del registro." data-hover="tooltip" onclick="cambiarVista(2)" class="btn btn-blue"> <i class="fa fa-list-alt"> Lista</i></button>
+                    @include('admin.partes.botonesVistas')
+                    @include('admin.partes.botonFiltrar')
                 </div>                      
                 <button data-placement="bottom" title="Registrar una nueva Empresa" type="button" data-hover="tooltip" data-toggle="modal" data-target="#modal-config"  class="btn btn-blue">
                     <i class="fa fa-plus-circle"> Registrar Empresa</i>
@@ -28,13 +28,27 @@
             </div>
         </div>
         <div class="clearfix"></div>
-    </div>    
-    <div class="page-content">
-        @include('admin.empresas.tabla')
-        @include('admin.empresas.tablaRegistros')
     </div>
+    <div class="page-content">
+        <div id="tab-general">
+            <div class="row mbl">
+                <div class="col-lg-12">                                
+                    <div class="col-md-12">
+                        <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                        </div>
+                    </div>                                
+                </div>
+                @include('admin.empresas.cabeceraTabla')   
+                <div class="tablaResultados">
+                    @include('admin.empresas.tablaLogos')
+                </div>                                                                       
+                @include('admin.empresas.tablaRegistros')
+            </div>
+         </div>        
+    </div>    
 @endsection
 @section('script') 
+    <script src="{{ asset('js/empresas.js') }}"></script>
     <script>
         var route = "/admin/empresas";
         var listSidebar = "li4";

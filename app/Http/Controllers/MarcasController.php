@@ -7,7 +7,6 @@ use Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Marca;
-use App\Empresa;
 use App\Logo_Marca;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\MarcaRequestCreate;
@@ -36,14 +35,17 @@ class MarcasController extends Controller
      */
     public function index(Request $request)
     {
-        $marcas = Marca::searchNombres($request->name)->orderBy('nombre','ASC')->paginate(12); //Retorno todos los registros de marcas según las especificaciones dadas a la variable recien creada.
-        $empresas = Empresa::orderBy('nombre','ASC')->lists('nombre','id');
+        $marcas = Marca::searchNombres($request->nombre)
+        ->searchEstado($request->estado)
+        ->searchEmpresa($request->idempresa)
+        ->orderBy('nombre','ASC')
+        ->paginate(); 
+
+        //Retorno todos los registros de marcas según las especificaciones dadas a la variable recien creada.
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('admin.marcas.tabla',compact('marcas'))->render());
+            return response()->json(view('admin.marcas.tablaLogos',compact('marcas'))->render());
         }
-        return view('admin.marcas.index')
-            ->with('empresas',$empresas)
-            ->with('marcas',$marcas); //Retorno al cliente la vista asociada al método con la colección de registros necesesarios.
+        return view('admin.marcas.index')->with('marcas',$marcas); //Retorno al cliente la vista asociada al método con la colección de registros necesesarios.
     }
 
     /**
@@ -53,7 +55,6 @@ class MarcasController extends Controller
      */
     public function create()
     {
-        return view('admin.marcas.create');
     }
 
     /**
@@ -100,11 +101,8 @@ class MarcasController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {        
-        $empresas = Empresa::orderBy('nombre','ASC')->lists('nombre','id');       
-        return view('admin.marcas.show')
-            ->with('marca', $this->marca)
-            ->with('empresas',$empresas);
+    {              
+        return view('admin.marcas.show')->with('marca', $this->marca);
     }
 
     /**

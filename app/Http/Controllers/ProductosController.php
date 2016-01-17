@@ -7,10 +7,7 @@ use Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Producto;
-use App\Marca;
-use App\Localidad;
 use App\Logo_Producto;
-use App\Tipoproducto;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\ProductoRequestCreate;
 use App\Http\Requests\ProductoRequestEdit;
@@ -49,8 +46,7 @@ class ProductosController extends Controller
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
             return response()->json(view('admin.productos.tablaLogos',compact('productos'))->render());
         }
-        return view('admin.productos.index')            
-            ->with('productos',$productos);
+        return view('admin.productos.index')->with('productos',$productos);
     }
 
     /**
@@ -98,14 +94,7 @@ class ProductosController extends Controller
      */
     public function show($id)
     {   
-        $marcas = Marca::orderBy('nombre','ASC')->lists('nombre','id');
-        $localidades = Localidad::orderBy('nombre','ASC')->lists('nombre','id');
-        $tipos = Tipoproducto::orderBy('nombreTipo','ASC')->lists('nombreTipo','id');
-        return view('admin.productos.show')
-            ->with('marcas',$marcas)
-            ->with('localidades', $localidades)
-            ->with('tipos', $tipos)
-            ->with('producto',$this->producto);
+        return view('admin.productos.show')->with('producto',$this->producto);
     }
 
     /**
