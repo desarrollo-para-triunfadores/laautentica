@@ -3,9 +3,14 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
+use Illuminate\Routing\Route;
 
 class ProductoRequestEdit extends Request
 {
+    public function __construct(Route $route)
+    {
+        $this->route = $route;
+    }
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,7 +29,12 @@ class ProductoRequestEdit extends Request
     public function rules()
     {
         return [
-            //
+            'nombre' => 'required|max:20|unique:productos,nombre,'.$this->route->getParameter('productos'),
+            'marca_id' => 'required', 
+            'tipoproducto_id' => 'required', 
+            'localidad_id' => 'required', 
+            'descripcion' => 'max:1000',      
+            'imagen' => 'mimes:jpeg,png|max:3072'
         ];
     }
 }

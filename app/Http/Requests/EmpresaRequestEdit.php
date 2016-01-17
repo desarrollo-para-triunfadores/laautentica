@@ -38,7 +38,8 @@ class EmpresaRequestEdit extends Request
             'altura' => 'required|max:10',
             'localidad_id' => 'required',
             'rubro_id' => 'required',
-            'email' => 'required|email|max:40'     
+            'email' => 'required|email|max:40' 
+            'imagen' => 'mimes:jpeg,png|max:3072'     
         ];
     }
 }
