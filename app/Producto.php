@@ -80,4 +80,9 @@ class Producto extends Model
                return $query->where('localidad_id', 'LIKE', $idOrigen);
             } 
     }
+
+    public function scopeSearchActivos($query)
+    {
+        return $query->where('estado', 'LIKE', 1);
+    }
 }

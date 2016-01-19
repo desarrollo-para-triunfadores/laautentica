@@ -82,7 +82,7 @@ class ProductosController extends Controller
         $imagen->nombre = $nombreImagen;
         $imagen->producto()->associate($producto);
         $imagen->save();
-        Flash::success('El producto "'. $producto->nombre .'"" ha sido registrado de forma existosa.');
+        Flash::success('El producto "'. $producto->nombre .'" ha sido registrado de forma existosa.');
         return redirect()->route('admin.productos.index');
     }
 

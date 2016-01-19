@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html class="noIE" lang="en-US">
+<html class="noIE" lang="es-AR">
 	<head>
 		<title>La Autentica Distribuidora SA - Resistencia-Chaco</title>
 		@include('front.partes.estilos')
 	</head>
 	<body>
 		@include('front.partes.cabeceraPartes')
+		<div id="modalProducto"></div>		
 		<div class="content-block parallax" id="parallax"></div><!-- #parallax -->
 		<div id="wrapper">
 			<div class="content-block" id="portfolio">
@@ -22,14 +23,11 @@
 				</div>
 			</div>
 		</div>
-		
-
-@include('front.partes.scripts')
-    <script src="{{ asset('js/productos.js') }}"></script>
-    <script>
-        var route = "/productos";
-    </script>
-    
-
+		<button id="boton-modal" class="hide" data-toggle="modal" data-target=".bs-example-modal-lg"></button>
+		@include('front.partes.scripts')
+	    <script src="{{ asset('js/productos.js') }}"></script>
+	    <script>
+	        var route = "/productos";
+	    </script>
 	</body>
 </html>

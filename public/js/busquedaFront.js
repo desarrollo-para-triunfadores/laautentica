@@ -32,3 +32,19 @@ function ocultarBusqueda()
      	$('#bot-buscar').html(" Mostrar Filtros");
     }
 }
+
+function cargarModal (id)
+{ 
+  $.ajax({
+    url:route+"/show",
+    data:{
+      id: id
+    },
+    type: 'GET',
+    dataType: 'json',
+    success: function(data){
+     $('#modalProducto').html(data);
+     $('#boton-modal').click();
+    }
+  });
+}

@@ -20,7 +20,7 @@ class frontProductosController extends Controller
     {
         $productos = Producto::searchNombres($request->nombre)
         ->searchMarcas($request->idmarca)
-        ->searchEstado($request->estado)
+        ->searchActivos()
         ->searchTipo($request->idtipo)
         ->searchOrigen($request->idorigen)
         ->orderBy('nombre','ASC')
@@ -59,9 +59,11 @@ class frontProductosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $producto = Producto::find($request->id);
+        return response()->json(view('front.productos.modalProducto',compact('producto'))->render());
+        
     }
 
     /**
