@@ -11,17 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/marcas/baggio', function () {
-    return view('front.partes.baggio');
-});
+*/
 
 Route::get('/inicio', function () {
     return view('front.partes.index');
 });
+
+Route::resource('/','frontHomeController');
 
 Route::resource('/productos','frontProductosController');
 
