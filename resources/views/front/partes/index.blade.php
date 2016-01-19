@@ -43,7 +43,7 @@
 											<a href="#wrapper"><i class="fa fa-home"></i> Inicio</a>
 										</li>
 										<li>
-											<a href="#about"><i class="fa fa-bookmark"></i> Acerca de nosotros</a>
+											<a href="#about"><i class="fa fa-bookmark"></i> Acerca de Nosotros</a>
 										</li>
 										<li>
 											<a href="#portfolio"><i class="fa fa-bookmark"></i> Marcas</a>
@@ -52,10 +52,7 @@
 											<a href="#services"><i class="fa fa-tasks"></i> Productos</a>
 										</li>
 										<li>
-											<a href="#blog"><i class="fa fa-wordpress"></i> Contacto</a>
-										</li>
-										<li>
-											<a href="#testimonials"><i class="fa fa-thumbs-up"></i> Mapa</a>
+											<a href="#footer"><i class="fa fa-wordpress"></i> Contacto</a>
 										</li>
 							      	</ul>
 							    </div><!-- /navbar-collapse -->
@@ -213,184 +210,12 @@
 			</div><!-- #services -->
 
 
-			<div class="content-block" id="blog">
-				<div class="container blog-sec">
-					<header class="block-heading cleafix">
-						<a href="#" class="btn btn-o btn-lg pull-right">View All</a>
-						<div class="title-page">
-							<p class="main-header">From the Blog</p>
-						    <p class="sub-header">Keep up with the latest happenings.</p>
-						</div>
-					</header>
-					<section class="block-body">
-						<div class="row">
-							<div class="col-sm-4 blog-post">
-								<img src="assets/images/bike_water1-1000x600.jpg">
-								<a href="#"><h2>Design Your Mind</h2></a>
-								<div class="date">6 Enero 2016</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-							<div class="col-sm-4 blog-post">
-								<img src="assets/images/mac_glasses1-1000x600.jpg">
-								<a href="#"><h2>Winter Is Comming</h2></a>
-								<div class="date">3 Nov, 2014</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-							<div class="col-sm-4 blog-post">
-								<img src="assets/images/road-1000x600.jpg">
-								<a href="#"><h2>The Illustration</h2></a>
-								<div class="date">3 Nov, 2014</div>
-								<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								<a href="">Read More</a>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div><!-- #blog -->
 
+	
 
-			<div class="content-block parallax" id="parallax">
-				<div class="container">
-					<h3 class="call-action pull-left">In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis.</h3>
-					<a href="#" class="pull-right btn btn-o-white btn-lg">Get a free quote</a>
-				</div>
-			</div><!-- #parallax -->
-
-			<div class="content-block" id="testimonials">
-				<div class="container testimonial-sec">
-
-					<header class="block-heading cleafix">
-						<div class="title-page  pull-left">
-							<p class="main-header">Testimonios de clientes</p>
-						    <p class="sub-header">What our client says</p>
-						</div>
-					</header>
-					
-					<section class="block-body">
-						<div class="row">
-							<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-							  	<!-- Indicators -->
-							  	<ol class="carousel-indicators">
-								    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-								    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-								    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-							  	</ol><!-- /.carousel-indicators -->
-
-
-							  	<!-- Wrapper for slides -->
-							  	<div class="carousel-inner" role="listbox">
-								    <div class="item active">
-								      	<div class="img-center">	
-								      		<img class="img-circle circular-img" src="assets/images/01_200x200.png">
-								      	</div>	
-								      	<h3>
-								      		Testimonio 1.
-								      	</h3>
-								      
-								    </div><!-- /.item -->
-								    <div class="item">
-								    	<div class="img-center">	
-								      		<img class="img-circle circular-img" src="assets/images/02_200x200.png">
-								      	</div>
-								       	<h3>
-								       		Testimonio 2
-								       	</h3>
-								      
-								    </div><!-- /.item -->
-								    <div class="item">
-								    	<div class="img-center">	
-								      		<img class="img-circle circular-img" src="assets/images/03_200x200.png">
-								        </div>
-								       	<h3>
-								       		Testimonio 3
-								       	</h3>
-								    </div><!-- /.item -->
-							  	</div><!-- /.carousel-inner -->
-							</div><!-- /.carousel slide -->
-						</div>	
-					</section><!-- /.block-body -->
-				</div>
-			</div><!-- /#testimonials -->
-
-			<div class="content-block" id="footer">
-				<div class="container">
-					<div class="row">
-							<div class="col-sm-4 blog-post">
-								
-								<h2 class="footer-block">Tiene preguntas, consultas?</h2>
-								<p>Ante cualquier inquietud no dude en enviarnos un mensaje, sera respondido a la brevedad.</p>
-
-								<p>texto 2 </p>
-
-								<p>texto 3 </p>
-							</div>
-							<div class="col-sm-4 blog-post">
-								<h2 class="footer-block">Dejenos su mensaje</h2>
-								<form action="contact-form.php" id="contactForm" method="post" name="contactform" class="" role="form">
-									<div class="form-group">
-								    	<input type="text" class="form-control form-control-white" id="name" name="name" placeholder="Nombre" required>
-								  	</div>
-								    <div class="form-group">
-								    	<input type="email" class="form-control form-control-white" id="email" name="email" placeholder="Tu email" required>
-								    </div>
-								    <div class="form-group">
-								    	<textarea class="form-control form-control-white" id="message" name="massage" placeholder="Deje aqui su mensaje.." required></textarea>
-								    </div>
-								    <div id="contactFormResponse"></div>
-								    <div class="form-group">
-								    	<input id="cfsubmit" type="submit" class="text-center btn btn-o-white" value="Enviar">
-								  	</div>
-								</form>
-							</div>
-							<div class="col-sm-4 blog-post">
-								
-								<h2 class="footer-block">Detalles de Contacto</h2>
-								<ul>
-									<li class="address-sub"><i class="fa fa-map-marker"></i>Direccion de Oficinas</li>
-										<p>
-											Calle Falsa 123 Ciudad de Resistencia-Chaco. Argentina.
-										</p>
-									<li class="address-sub"><i class="fa fa-phone"></i>Teléfonos de Contacto</li>
-										<p>
-											Local: +54 9 362-4...<br>
-											Celular: +54 9 362 451-1324 (Marcia)
-										</p>
-									<li class="address-sub"><i class="fa fa-envelope-o"></i>Correo Electronico</li>
-										<p>
-											<a href="mailto:info@themewagon.com">info@laautentica.com.ar</a><br>
-											<a href="http://www.laautentica.com.ar/">www.LaAutentica.com.ar</a>
-										</p>
-
-
-								</ul>
-								<div class="social">
-									<a href="https://www.facebook.com/La-Autentica-Distribuidora-579709592177010"><i class="fa fa-facebook"></i></a>
-
-									<!--
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-instagram"></i></a>
-									<a href="#"><i class="fa fa-pinterest-p"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-skype"></i></a>
-									-->
-								</div>
-								
-							</div>
-						</div>
-				</div>
-			</div>
-			<div class="content-block footer-bottom" id="footer">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-6">&copy; Copyright Caszeruk Association 2016</div>
-						<!--	<div class="col-xs-6 text-right">Tema por:<a href="http://www.themewagon.com/" target="_blink">ThemeWagon</a></div>	-->
-					</div>
-				</div>
-			</div><!-- #footer -->
-
+			@include('front.partes.contacto')
+			
+@include('front.partes.pie')
 		</div><!--/#wrapper-->
 	@include('front.partes.scripts')
 	</body>

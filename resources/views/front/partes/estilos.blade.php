@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="{{asset('plantillas/Avada/assets/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="{{asset('plantillas/Avada/assets/css/style.css')}}">
 
+            <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/bootstrap-select/css/bootstrap-select.min.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/bootstrap-select/css/bootstrap-select.css') }}">
+
 
 
 		

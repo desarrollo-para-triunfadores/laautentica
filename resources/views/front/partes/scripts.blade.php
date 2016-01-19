@@ -20,6 +20,9 @@
 		<script src="{{asset('plantillas/Avada/assets/js/script.js')}}"></script>
 		<script src="{{asset('plantillas/Avada/assets/js/smoothscroll.js')}}"></script>
 
+<script src="{{ asset('plantillas/bootstrap-select/js/bootstrap-select.js') }}"></script>
+<script src="{{ asset('plantillas/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
+
 		<script type="text/javascript">
 		jQuery(document).ready(function($){
 
@@ -37,10 +40,6 @@
 		    
 		 		};   	
 			});
-0..
-		.
-		000.000000000000.
-				.
 		  });
 
 		jQuery('.scroll').on('click', function(e){		

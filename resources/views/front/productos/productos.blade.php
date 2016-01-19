@@ -60,61 +60,17 @@
 				</div>
 			</div>
 		</header>
-
+<div class="content-block parallax" id="parallax">
+		
+			</div><!-- #parallax -->
 		<div id="wrapper">
 			
 			
+			
 
-
-			<div class="content-block" id="portfolio">
-				<div class="container portfolio-sec">
-					<header class="block-heading cleafix">
-						<a href="#" class="btn btn-o btn-lg pull-right">Ver todas</a>
-						<div class="title-page">
-							<p class="main-header">Marcas </p>
-						    <p class="sub-header">Heche un vistazo a las marcas con las que trabajamos</p>
-					    </div>
-					</header>
-					<section class="block-body">
-						<div class="row">
-							<div class="col-sm-4">
-								<a href="/marcas/baggio" class="recent-work" style="background-image:url(imagenes/baggio.jpg)">
-									<span class="btn btn-o-white">Baggio</span>
-								</a>
-							</div>
-							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/min_icons_thumb1-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 2</span>
-								</a>
-							</div>
-							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/flat_icons_thumb.jpg)">
-									<span class="btn btn-o-white">Marca 3</span>
-								</a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/wood-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 4</span>
-								</a>
-							</div>
-							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/bike-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 5</span>
-								</a>
-							</div>
-							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/six_1-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 6</span>
-								</a>
-							</div>
-						</div>
-					</section>
-				</div>
-			</div><!-- #portfolio -->
-
-	
+			
+	@include('front.productos.cabeceraTabla')
+	@include('front.productos.contenidoTabla')
 
 
 

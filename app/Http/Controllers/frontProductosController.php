@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Producto;
+use Illuminate\Routing\Route;
 
 class frontProductosController extends Controller
 {
@@ -14,9 +16,20 @@ class frontProductosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('front.partes.productos');
+        $productos = Producto::searchNombres($request->nombre)
+        ->searchMarcas($request->idmarca)
+        ->searchEstado($request->estado)
+        ->searchTipo($request->idtipo)
+        ->searchOrigen($request->idorigen)
+        ->orderBy('nombre','ASC')
+        ->paginate();
+    
+        if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
+            return response()->json(view('front.productos.tablaLogos',compact('productos'))->render());
+        }
+        return view('front.productos.productos')->with('productos',$productos);
     }
 
     /**

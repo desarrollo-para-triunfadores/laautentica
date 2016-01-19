@@ -17,7 +17,7 @@ use Illuminate\Routing\Route;
 
 class ProductosController extends Controller
 {
-     public function __construct()
+    public function __construct()
     {
         Carbon::setlocale('es'); // Instancio en Español el manejador de fechas de Laravel
         $this->beforeFilter('@find',['only'=>['edit', 'show', 'update','destroy']]); // Acá hacemos llamado a la función find para optimizar código y no repetir instrucciones en todos esos métodos.
