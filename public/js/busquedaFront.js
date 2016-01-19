@@ -22,27 +22,6 @@ jQuery('.scroll').on('click', function(e){
 
 //Paginación desde el cajón de búsqueda
 
-$(document).on('click', '.input-icon a', function (e){
-	e.preventDefault();
-	enviar();
-});
-
-
-//Paginación desde el cajón de búsqueda presionando enter
-
-function lanzar()
-{
-	$('.input-icon a').click();
-}
-
-$(document).keypress(function(e) 
-{
-   if(e.which == 13) 
-   {
-      lanzar();
-   }
-});
-
 function ocultarBusqueda()
 {
 	if ($('#busqueda').hasClass('hide')){
@@ -50,6 +29,6 @@ function ocultarBusqueda()
    		$('#busqueda').removeClass("hide");
     }else{
      	$('#busqueda').addClass("hide");
-     	$('#bot-buscar').html(" Mostrar filtros");
+     	$('#bot-buscar').html(" Mostrar Filtros");
     }
 }

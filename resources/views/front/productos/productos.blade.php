@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="noIE" lang="en-US">
-<!--<![endif]-->
 	<head>
 		<title>La Autentica Distribuidora SA - Resistencia-Chaco</title>
 		@include('front.partes.estilos')
@@ -12,7 +11,7 @@
 			<div class="content-block" id="portfolio">
 				<div class="container portfolio-sec">
 					<header class="block-heading cleafix">
-						<a  onclick="ocultarBusqueda();" class="btn btn-o btn-lg pull-right"><i id="bot-buscar" class="fa fa-search"> Mostrar filtros</i></a>
+						<a  onclick="ocultarBusqueda();" class="btn btn-o btn-lg pull-right"><i id="bot-buscar" class="fa fa-search"> Mostrar Filtros</i></a>
 						<div class="title-page">
 							<p class="main-header">Productos </p>
 						    <p class="sub-header">Heche un vistazo a los productos con los que trabajamos</p>
@@ -22,7 +21,15 @@
 					@include('front.productos.contenidoTabla')
 				</div>
 			</div>
-		</div><!--/#wrapper-->
-		@include('front.partes.scripts')
+		</div>
+		
+
+@include('front.partes.scripts')
+    <script src="{{ asset('js/productos.js') }}"></script>
+    <script>
+        var route = "/productos";
+    </script>
+    
+
 	</body>
 </html>

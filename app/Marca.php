@@ -38,7 +38,7 @@ class Marca extends Model implements SluggableInterface
 
     public function scopeSearchNombres($query, $nombre)
     {           
-        if ($nombre == null)
+        if ($nombre == "-1")
             {
                return $query;
             } else {

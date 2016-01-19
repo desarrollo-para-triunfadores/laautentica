@@ -1,4 +1,4 @@
-<section class="block-body">
+<section class="block-body tablaResultados">
 	<div class="row">
 		@foreach($productos as $producto)
 			@if ($producto->logo_producto->nombre === "sin imagen")

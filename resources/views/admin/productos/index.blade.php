@@ -47,3 +47,10 @@
          </div>        
     </div>
 @endsection
+@section('script') 
+    <script src="{{ asset('js/productos.js') }}"></script>
+    <script>
+        var route = "/admin/productos";
+        var listSidebar = "li7";
+    </script>
+@endsection

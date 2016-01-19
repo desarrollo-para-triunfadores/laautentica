@@ -32,7 +32,7 @@ class Producto extends Model
 
     public function scopeSearchNombres($query, $name)
     {           
-        if ($name == null)
+        if ($name == "-1")
             {
                return $query;
             } else {                

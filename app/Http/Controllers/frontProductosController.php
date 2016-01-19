@@ -27,7 +27,7 @@ class frontProductosController extends Controller
         ->paginate();
     
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('front.productos.tablaLogos',compact('productos'))->render());
+            return response()->json(view('front.productos.contenidoTabla',compact('productos'))->render());
         }
         return view('front.productos.productos')->with('productos',$productos);
     }

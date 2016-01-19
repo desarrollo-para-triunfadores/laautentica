@@ -2,6 +2,7 @@
 
 use Illuminate\Contracts\View\View;
 use App\Empresa;
+use App\Marca;
 
 class MarcaComposer {
     /**
@@ -13,8 +14,9 @@ class MarcaComposer {
     public function compose(View $view)
     {
         $empresas = Empresa::orderBy('nombre','ASC')->lists('nombre','id');        
-
-        $view->with('empresas',json_decode($empresas, true));
+        $marcaslista = Marca::orderBy('nombre','ASC')->lists('nombre','nombre');
+        $view->with('marcaslista', json_decode($marcaslista, true))
+             ->with('empresas',json_decode($empresas, true));
     }
 
 }

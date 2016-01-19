@@ -13,9 +13,7 @@ function enviar ()
 		type: 'GET',
 		dataType: 'json',
 		success: function(data){
-		
 			$(".tablaResultados").html(data);			
-			$('#input-filtro').select();
 		}
 	});
 }
