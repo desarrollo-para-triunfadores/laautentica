@@ -1,11 +1,12 @@
-<div id="busqueda" class="panel panel-default">
+<br>
+<br>
+<div id="busqueda" class="panel panel-default hide">
     <div class="panel-body">
         <div class="row col-lg-12"> 
             <div class="col-lg-4">                                         
                 <div class="form-group">
                     <label>Nombre</label>
                     <div class="input-icon right text-white">
-                        <a href="#"><i class="fa fa-search"></i></a>   
                         <input id="bus-nombre" type="text" class="form-control" placeholder="Escriba aquí el nombre de un producto...">                                                                                                                                      
                     </div>                                                                                                                                                         
                 </div>

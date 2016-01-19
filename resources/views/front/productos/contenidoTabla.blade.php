@@ -1,11 +1,4 @@
-<div class="content-block" id="portfolio">
-	<div class="container portfolio-sec">
-		<header class="block-heading cleafix">
-			<div class="title-page">
-				<p class="main-header">Marcas </p>
-			    <p class="sub-header">Heche un vistazo a las marcas con las que trabajamos</p>
-		    </div>
-		</header>
+
 		<section class="block-body">
 			<div class="row">
 				@foreach($productos as $producto)
@@ -25,5 +18,3 @@
 				@endforeach    
 			</div>
 		</section>
-	</div>
-</div>
