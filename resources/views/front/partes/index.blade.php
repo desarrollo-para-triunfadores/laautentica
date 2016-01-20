@@ -28,7 +28,7 @@
 						    <!-- Brand and toggle get grouped for better mobile display -->
 							    <div class="navbar-header">
 							      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-								        <span class="sr-only">Toggle navigation</span>
+								        <span class="sr-only"> </span>
 								        <span class="icon-bar"></span>
 								        <span class="icon-bar"></span>
 								        <span class="icon-bar"></span>
@@ -92,41 +92,41 @@
 						<a href="{{ route('productos.index') }}" class="btn btn-o btn-lg pull-right">Ver todas</a>
 						<div class="title-page">
 							<p class="main-header">Marcas </p>
-						    <p class="sub-header">Heche un vistazo a las marcas con las que trabajamos</p>
+						    <p class="sub-header">Heche un vistazo a algunas de las marcas con las que trabajamos</p>
 					    </div>
 					</header>
 					<section class="block-body">
 						<div class="row">
 							<div class="col-sm-4">
-								<a href="/marcas/baggio" class="recent-work" style="background-image:url(imagenes/baggio.jpg)">
+								<a href="/marcas/baggio" class="recent-work" style="background-image:url(imagenes/marcas/baggio.jpg)">
 									<span class="btn btn-o-white">Baggio</span>
 								</a>
 							</div>
 							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/min_icons_thumb1-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 2</span>
+								<a href="#" class="recent-work" style="background-image:url(imagenes/marcas/rosamonte2.jpg)">
+									<span class="btn btn-o-white">Rosamonte</span>
 								</a>
 							</div>
 							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/flat_icons_thumb.jpg)">
-									<span class="btn btn-o-white">Marca 3</span>
+								<a href="#" class="recent-work" style="background-image:url(imagenes/marcas/frizze.jpg)">
+									<span class="btn btn-o-white">Frizze</span>
 								</a>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/wood-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 4</span>
+								<a href="#" class="recent-work" style="background-image:url(imagenes/marcas/georgalos.png)">
+									<span class="btn btn-o-white">Georgalos</span>
 								</a>
 							</div>
 							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/bike-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 5</span>
+								<a href="#" class="recent-work" style="background-image:url(imagenes/marcas/molino-canuelas.jpeg)">
+									<span class="btn btn-o-white">Molino Cañuelas</span>
 								</a>
 							</div>
 							<div class="col-sm-4">
-								<a href="#" class="recent-work" style="background-image:url(assets/images/six_1-320x240.jpg)">
-									<span class="btn btn-o-white">Marca 6</span>
+								<a href="#" class="recent-work" style="background-image:url(imagenes/marcas/danubio.png)">
+									<span class="btn btn-o-white">Molino Danubio</span>
 								</a>
 							</div>
 						</div>
@@ -134,49 +134,13 @@
 				</div>
 			</div><!-- #portfolio -->
 
-			<div class="content-block parallax" id="services">
-				<div class="container services-sec">
-					<div class="title-page">
-						<p class="main-header">Our Services </p>
-					    <p class="sub-header">A little about what we do</p>
-					</div>
-					<section class="block-body">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-send-o"></i>
-									</div>
-									<h2 class="service-head">Illustration</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-heart-o"></i>
-									</div>	
-									<h2 class="service-head">3D Modeling</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<div class="bar">
-										<i class="fa fa-camera-retro"></i>
-									</div>	
-									<h2 class="service-head">Photography</h2>
-									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
-								</div>
-							</div>
-						</div>
-					</section>
-				</div>
+			<div class="content-block parallax" id="productos">
+					@include('front.partes.productos')
 			</div><!-- #services -->
 
 
 
-	
+
 
 			@include('front.partes.contacto')
 			

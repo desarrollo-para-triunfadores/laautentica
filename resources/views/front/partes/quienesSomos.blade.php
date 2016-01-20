@@ -19,15 +19,15 @@
 	                    <div class="col-md-4 text-center">
 	                        <div class="aboutus-item">
 	                            <i class="aboutus-icon fa fa-usd"></i>
-	                            <h4 class="aboutus-title">Not Expensive</h4>
-	                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
+	                            <h4 class="aboutus-title"> </h4>
+	                            <p class="aboutus-desc"> </p>
 	                        </div>
 	                    </div>
 	                    <div class="col-md-4 text-center">
 	                        <div class="aboutus-item">
 	                            <i class="aboutus-icon fa fa-cutlery"></i>
-	                            <h4 class="aboutus-title">Delicious Food</h4>
-	                            <p class="aboutus-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni voluptatum et, alias vero, reprehenderit doloremque neque dignissimos voluptas.</p>
+	                            <h4 class="aboutus-title"> </h4>
+	                            <p class="aboutus-desc"> </p>
 	                        </div>
 	                    </div>
 	                </div>

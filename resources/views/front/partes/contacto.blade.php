@@ -6,9 +6,9 @@
 								<h2 class="footer-block">Tiene preguntas, consultas?</h2>
 								<p>Ante cualquier inquietud no dude en enviarnos un mensaje, sera respondido a la brevedad.</p>
 
-								<p>texto 2 </p>
+								<p> </p>
 
-								<p>texto 3 </p>
+								<p> </p>
 							</div>
 							<div class="col-sm-4 blog-post">
 								<h2 class="footer-block">Dejenos su mensaje</h2>
@@ -34,11 +34,11 @@
 								<ul>
 									<li class="address-sub"><i class="fa fa-map-marker"></i>Direccion de Oficinas</li>
 										<p>
-											Calle Falsa 123 Ciudad de Resistencia-Chaco. Argentina.
+											Echeverregaray 299 - RESISTENCIA- CHACO - ARGENTINA.
 										</p>
 									<li class="address-sub"><i class="fa fa-phone"></i>Teléfonos de Contacto</li>
 										<p>
-											Local: +54 9 362-4...<br>
+											Local: +54 9 362-4416770<br>
 											Celular: +54 9 362 451-1324 (Marcia)
 										</p>
 									<li class="address-sub"><i class="fa fa-envelope-o"></i>Correo Electronico</li>
