@@ -42,9 +42,15 @@ function cargarModal (id)
     },
     type: 'GET',
     dataType: 'json',
-    success: function(data){
+    success: function(data)
+    {
      $('#modalProducto').html(data);
      $('#boton-modal').click();
     }
   });
+
+  function redirigir (pag)
+  {
+    alert(pag);
+  }
 }

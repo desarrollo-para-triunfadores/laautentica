@@ -22,6 +22,14 @@ Route::get('/inicio', function () {
 
 Route::resource('/','frontHomeController');
 
+Route::get('/contacto', function () {
+    return view('front.contacto.index');
+});
+
+Route::get('/institucional', function () {
+    return view('front.institucional.index');
+});
+
 Route::resource('/productos','frontProductosController');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
