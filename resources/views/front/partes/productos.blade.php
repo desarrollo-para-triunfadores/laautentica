@@ -37,8 +37,8 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/danubio.png)">
-                        <span class="btn btn-o-white">Molino Danubio</span>
+                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/siDiet.jpg)">
+                        <span class="btn btn-o-white">Si Diet</span>
                     </a>
                 </div>
             </div>
