@@ -66,4 +66,9 @@ class Marca extends Model implements SluggableInterface
                return $query->where('empresa_id', 'LIKE', $idempresa);
             } 
     }
+
+    public function scopeSearchActivos($query)
+    {
+        return $query->where('estado', 'LIKE', 1);
+    }
 }

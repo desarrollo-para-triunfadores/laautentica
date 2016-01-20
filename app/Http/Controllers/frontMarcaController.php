@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Marca;
 use App\Producto;
 use Illuminate\Routing\Route;
 
-class frontProductosController extends Controller
+class frontMarcaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,18 +19,17 @@ class frontProductosController extends Controller
      */
     public function index(Request $request)
     {
-        $productos = Producto::searchNombres($request->nombre)
-        ->searchMarcas($request->idmarca)
-        ->searchActivos()
-        ->searchTipo($request->idtipo)
-        ->searchOrigen($request->idorigen)
+        $marcas = Marca::searchNombres($request->nombre)
+        ->searchEstado($request->estado)
+        ->searchEmpresa($request->idempresa)
         ->orderBy('nombre','ASC')
-        ->paginate();
-    
+        ->paginate(); 
+
+        //Retorno todos los registros de marcas según las especificaciones dadas a la variable recien creada.
         if($request->ajax()){ //Si la solicitud fue realizada utilizando ajax se devuelven los registros únicamente a la tabla.
-            return response()->json(view('front.productos.contenidoTabla',compact('productos'))->render());
+            return response()->json(view('front.marcas.contenidoTabla',compact('marcas'))->render());
         }
-        return view('front.productos.index')->with('productos',$productos);
+        return view('front.marcas.index')->with('marcas',$marcas); //Retorno al cliente la vista asociada al método con la colección de registros necesesarios.
     }
 
     /**
@@ -59,10 +59,19 @@ class frontProductosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($id)
     {
-        $producto = Producto::find($request->id);
-        return response()->json(view('front.productos.modalProducto',compact('producto'))->render());
+        $marca = Marca::find($id);
+        $productoslista = Producto::searchMarcas($id)->searchActivos()->orderBy('nombre','ASC')->lists('nombre','nombre');
+        $productos = Producto::searchMarcas($id)
+            ->searchActivos()
+            ->orderBy('nombre','ASC')
+            ->paginate();
+
+        return view('front.marcas.showMarca')
+            ->with('productoslista', json_decode($productoslista, true))
+            ->with('productos',$productos)
+            ->with('marca',$marca); 
     }
 
     /**
