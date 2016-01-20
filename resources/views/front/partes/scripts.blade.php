@@ -24,6 +24,5 @@
 <script src="{{ asset('plantillas/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
 
 
-
 <script src="{{ asset('js/busquedaFront.js') }}"></script>
 

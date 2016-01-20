@@ -143,8 +143,11 @@
 
 
 			@include('front.partes.contacto')
+
+			<!--Mapa de Google-->
+			<iframe src="https://mapsengine.google.com/map/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="1349" height="600"></iframe>
 			
-@include('front.partes.pie')
+			@include('front.partes.pie')
 		</div><!--/#wrapper-->
 	@include('front.partes.scripts')
 	</body>

@@ -4,7 +4,7 @@
 							<div class="col-sm-4 blog-post">
 								
 								<h2 class="footer-block">Tiene preguntas, consultas?</h2>
-								<p>Ante cualquier inquietud no dude en enviarnos un mensaje, sera respondido a la brevedad.</p>
+								<p>Dejenos su email y le adjuntaremos un catalogo de productos a la brevedad.</p>
 
 								<p> </p>
 
@@ -34,7 +34,7 @@
 								<ul>
 									<li class="address-sub"><i class="fa fa-map-marker"></i>Direccion de Oficinas</li>
 										<p>
-											Echeverregaray 299 - RESISTENCIA- CHACO - ARGENTINA.
+											Calle Corrientes 2101 - RESISTENCIA- CHACO - ARGENTINA.
 										</p>
 									<li class="address-sub"><i class="fa fa-phone"></i>Teléfonos de Contacto</li>
 										<p>
