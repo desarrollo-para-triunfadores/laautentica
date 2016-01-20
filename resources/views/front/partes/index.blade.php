@@ -89,7 +89,7 @@
 			<div class="content-block" id="portfolio">
 				<div class="container portfolio-sec">
 					<header class="block-heading cleafix">
-						<a href="{{ route('productos.index') }}" class="btn btn-o btn-lg pull-right">Ver todas</a>
+						<a href="{{ route('marcas.index') }}" class="btn btn-o btn-lg pull-right">Ver todas</a>
 						<div class="title-page">
 							<p class="main-header">Marcas </p>
 						    <p class="sub-header">Heche un vistazo a algunas de las marcas con las que trabajamos</p>

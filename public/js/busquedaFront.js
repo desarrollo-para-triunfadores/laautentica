@@ -33,6 +33,17 @@ function ocultarBusqueda()
     }
 }
 
+function ocultarProductos()
+{
+  if ($('#portfolio').hasClass('hide')){
+      $('#bot-buscar2').html(" Ocultar sus Productos");
+      $('#portfolio').removeClass("hide");
+    }else{
+      $('#portfolio').addClass("hide");
+      $('#bot-buscar2').html(" Mostrar sus Productos");
+    }
+}
+
 function cargarModal (id)
 { 
   $.ajax({

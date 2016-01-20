@@ -1,6 +1,6 @@
 <br>
 <br>    
-<div id="busqueda" class="panel panel-default hide">
+<div id="busqueda" class="panel panel-default hide animated bounceInDown">
     <div class="panel-body">
         <div class="row col-lg-12"> 
             <div class="col-lg-4">                                         
