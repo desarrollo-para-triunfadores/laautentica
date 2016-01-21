@@ -20,20 +20,20 @@
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/uvitaVino.jpg)">
-                        <span class="btn btn-o-white">Vino Uvita</span>
+                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/sandy.jpg)">
+                        <span class="btn btn-o-white">Chocolatada Sandy</span>
                     </a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <a href="#" class="recent-work" style="background-image:url(imagenes/productos/flynnPaff.jpg)">
-                        <span class="btn btn-o-white">Georgalos</span>
+                        <span class="btn btn-o-white">Flynn Paff</span>
                     </a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/snackMatero.jpeg)">
-                        <span class="btn btn-o-white">Molino Cañuelas</span>
+                    <a href="#" class="recent-work" style="background-image:url(imagenes/productos/uvitatinto.jpg)">
+                        <span class="btn btn-o-white">Vinos Uvita</span>
                     </a>
                 </div>
                 <div class="col-sm-4">

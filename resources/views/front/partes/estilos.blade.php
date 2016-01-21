@@ -17,7 +17,7 @@
 
 <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/bootstrap-select/css/bootstrap-select.min.css') }}">
 <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/bootstrap-select/css/bootstrap-select.css') }}">
-
+ <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/KAdmin-Dark/styles/animate.css') }} ">
 
 
 		

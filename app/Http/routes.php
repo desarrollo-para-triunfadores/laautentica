@@ -32,6 +32,8 @@ Route::get('/institucional', function () {
 
 Route::resource('/productos','frontProductosController');
 
+Route::resource('/marcas','frontMarcaController');
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('usuarios','UsersController');
    Route::resource('paises','PaisesController');
