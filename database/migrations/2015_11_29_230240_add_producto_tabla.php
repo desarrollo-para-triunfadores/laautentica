@@ -17,8 +17,6 @@ class AddProductoTabla extends Migration
             $table->string('nombre');
             $table->string('descripcion', 1000);
             $table->boolean('estado');
-            $table->double('costo');
-            $table->double('precio');
             $table->integer('tipoproducto_id')->unsigned();
             $table->integer('marca_id')->unsigned();
             $table->integer('localidad_id')->unsigned();

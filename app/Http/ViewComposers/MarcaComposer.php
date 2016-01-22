@@ -13,8 +13,8 @@ class MarcaComposer {
      */
     public function compose(View $view)
     {
-        $empresas = Empresa::orderBy('nombre','ASC')->lists('nombre','id');        
-        $marcaslista = Marca::orderBy('nombre','ASC')->lists('nombre','nombre');
+        $empresas = Empresa::orderBy('nombre','ASC')->searchValidos()->lists('nombre','id');        
+        $marcaslista = Marca::orderBy('nombre','ASC')->searchActivos()->lists('nombre','nombre');
         $view->with('marcaslista', json_decode($marcaslista, true))
              ->with('empresas',json_decode($empresas, true));
     }

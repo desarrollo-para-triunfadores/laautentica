@@ -26,7 +26,7 @@ class MarcaRequestCreate extends Request
         return [
             'nombre' => 'required|max:20|unique:marcas',
             'empresa_id' => 'required',
-            'imagen' => 'mimes:jpeg,png|max:3072'            
+            'imagen' => 'mimes:jpeg,png|required|max:3072'            
         ];
     }
 }

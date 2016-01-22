@@ -60,4 +60,9 @@ class Empresa extends Model
                return $query->where('localidad_id', 'LIKE', $idOrigen);
             } 
     }
+
+    public function scopeSearchValidos($query)
+    {
+        return $query->where('id',  '>', 1);
+    }
 }

@@ -9,13 +9,9 @@
             </div>
             <div class="modal-body">   
                 @if ($errors->any())
-                     @include('admin.partes.listaErrores')
+                    @include('admin.partes.listaErrores')
                 @else
-                    <div class="alert alert-info alert-dismissable">
-                        <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
-                        <strong>Tip:</strong> 
-                        Si no especificas un nuevo archivo para el logo de la marca, este no se actualizará y en consecuencia seguirá siendo el mismo.                
-                    </div>
+                    @include('admin.partes.msgLogoActualizar')
                 @endif                        
 {!! Form::model($producto, ['route' => ['admin.productos.update', $producto], 'method' => 'PUT', 'id' =>'form-actualizar', 'class' => 'form-horizontal', 'files' => true]) !!}
                         @include('admin.productos.contenidoForm')
@@ -23,7 +19,7 @@
                             <div class="col-sm-9 controls">
                                 <div class="row">
                                     <div class="col-xs-12">
-                                        <div class="input-icon right">
+                                        <div class="input-icon right">                                        
                                             <i class="fa fa-check"></i>
                                             @if ($producto->estado)
                                                 {!! Form::checkbox('estado', '1',true) !!} 

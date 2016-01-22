@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Marca;
 use App\Producto;
+use App\Tipoproducto;
 use Illuminate\Routing\Route;
 
 class frontMarcaController extends Controller
@@ -21,6 +22,7 @@ class frontMarcaController extends Controller
     {
         $marcas = Marca::searchNombres($request->nombre)
         ->searchEstado($request->estado)
+        ->searchActivos()
         ->searchEmpresa($request->idempresa)
         ->orderBy('nombre','ASC')
         ->paginate(); 
@@ -63,12 +65,14 @@ class frontMarcaController extends Controller
     {
         $marca = Marca::find($id);
         $productoslista = Producto::searchMarcas($id)->searchActivos()->orderBy('nombre','ASC')->lists('nombre','nombre');
+        $tipos = Tipoproducto::orderBy('nombreTipo','ASC')->lists('nombreTipo','id');
         $productos = Producto::searchMarcas($id)
             ->searchActivos()
             ->orderBy('nombre','ASC')
             ->paginate();
 
         return view('front.marcas.showMarca')
+            ->with('tipos', json_decode($tipos, true))
             ->with('productoslista', json_decode($productoslista, true))
             ->with('productos',$productos)
             ->with('marca',$marca); 

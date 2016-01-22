@@ -16,10 +16,10 @@ class ComposerServiceProvider extends ServiceProvider
     { 
         View::composers
         ([
-            'App\Http\ViewComposers\ProductoComposer' => ['admin.productos.contenidoForm', 'admin.productos.cabeceraTabla', 'front.productos.cabeceraTabla'],
+            'App\Http\ViewComposers\ProductoComposer' => ['admin.productos.contenidoForm', 'admin.productos.cabeceraTabla', 'front.productos.cabeceraTabla'],            
             'App\Http\ViewComposers\MarcaComposer' => ['admin.marcas.contenidoForm', 'admin.marcas.cabeceraTabla', 'front.marcas.cabeceraTabla'],
-            'App\Http\ViewComposers\EmpresaComposer' => ['admin.empresas.contenidoForm', 'admin.empresas.cabeceraTabla'],
-             'App\Http\ViewComposers\MarcaProductoComposer' => 'front.marcas.cabeceraProductoMarca',
+            'App\Http\ViewComposers\EmpresaComposer' => ['admin.empresas.contenidoForm', 'admin.empresas.cabeceraTabla'], 
+            'App\Http\ViewComposers\ProductoFrontComposer' => 'front.productos.cabeceraTabla',        
             'App\Http\ViewComposers\ProfileComposer' => 'welcome'
         ]);
     }

@@ -48,7 +48,7 @@
                                                 <div class="col-md-4">
                                                     @if ($empresa->logo_empresa->nombre === "sin imagen")                                           
                                                         <div class="form-group">
-                                                            <div class="text-center mbl"><img data-src="holder.js/350x250/text:Sin Logo" alt=""  class="img-thumbnail"/></div>
+                                                            <div class="text-center mbl"><img src="{{ asset('imagenes/empresas/sin-logo.jpg') }}" alt="" style="width:350px;height:250px" class="img-thumbnail"/></div>
                                                         </div>  
                                                     @else
                                                         <div class="form-group">

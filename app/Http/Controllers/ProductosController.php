@@ -116,7 +116,8 @@ class ProductosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(ProductoRequestEdit $request, $id)
-    {
+    {   
+        $estadoAnterior = $this->producto->estado;
         if ($request->file('imagen'))
         {                 
             $logo_producto = $this->producto->logo_producto;
@@ -131,10 +132,18 @@ class ProductosController extends Controller
             Storage::disk('productos')->put($nombreImagen, \File::get($file));  // Movemos la imagen nueva al directorio /imagenes/productos   
         }  
         $this->producto->fill($request->all());
-        if ($request->estado == null)
+
+        if ($this->producto->marca->estado)
         {
-            $this->producto->estado = 0;
-        } 
+            if ($request->estado == null)
+            {
+                $this->producto->estado = 0;
+            } 
+        } else 
+        {
+            $this->producto->estado = $estadoAnterior;
+        }
+       
         $this->producto->save();     
         Flash::success("Se ha realizado la actualización del registro: ".$this->producto->nombre.".");
         return redirect()->route('admin.productos.show', $id);

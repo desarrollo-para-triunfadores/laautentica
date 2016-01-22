@@ -9,13 +9,9 @@
             </div>
             <div class="modal-body">   
                 @if ($errors->any())
-                     @include('admin.partes.listaErrores')
+                    @include('admin.partes.listaErrores')
                 @else
-                    <div class="alert alert-info alert-dismissable">
-                        <button type="button" data-dismiss="alert" aria-hidden="true" class="close">&times;</button>
-                        <strong>Tip:</strong> 
-                        Si no especificas un nuevo archivo para el logo de la marca, este no se actualizará y en consecuencia seguirá siendo el mismo.                
-                    </div>
+                    @include('admin.partes.msgLogoActualizar')
                 @endif                        
 {!! Form::model($marca, ['route' => ['admin.marcas.update', $marca], 'method' => 'PUT', 'id' =>'form-actualizar',  'class' => 'form-horizontal', 'files' => true]) !!}                                                                                       
                         @include('admin.marcas.contenidoForm') 

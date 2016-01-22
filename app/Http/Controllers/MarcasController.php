@@ -7,6 +7,7 @@ use Storage;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Marca;
+use App\Producto;
 use App\Logo_Marca;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\MarcaRequestCreate;
@@ -143,6 +144,11 @@ class MarcasController extends Controller
         if ($request->estado == null)
         {
             $this->marca->estado = 0;
+            foreach ($this->marca->productos as $producto) 
+            {
+                $producto->estado = 0;
+                $producto->save();
+            }               
         } 
         $this->marca->save();
         Flash::success("Se ha realizado la actualización del registro: ".$this->marca->nombre.".");

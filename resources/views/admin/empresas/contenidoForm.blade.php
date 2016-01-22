@@ -106,7 +106,7 @@
                                     <div class="col-xs-12">
                                         <div class="input-icon right">
                                             <i class="fa fa-pencil"></i>
-                                            {!! Form::text('web', null, ['class' => 'form-control', 'placeholder' => 'campo opcional']) !!}                                
+                                            {!! Form::url('web', null, ['class' => 'form-control', 'placeholder' => 'campo opcional']) !!}                                
                                         </div>
                                     </div>
                                 </div>

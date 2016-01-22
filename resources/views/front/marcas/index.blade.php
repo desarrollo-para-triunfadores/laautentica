@@ -22,9 +22,9 @@
 					@include('front.marcas.contenidoTabla')
 				</div>
 			</div>
+			<button id="boton-modal" class="hide" data-toggle="modal" data-target=".bs-example-modal-lg"></button>
+			@include('front.partes.pie')
 		</div>
-		<button id="boton-modal" class="hide" data-toggle="modal" data-target=".bs-example-modal-lg"></button>
-		@include('front.partes.pie')
 		@include('front.partes.scripts')
 	    <script src="{{ asset('js/marcas.js') }}"></script>
 	    <script>

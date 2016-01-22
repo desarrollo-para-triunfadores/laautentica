@@ -59,9 +59,9 @@ function cargarModal (id)
      $('#boton-modal').click();
     }
   });
+}
 
   function redirigir (pag)
   {
-    alert(pag);
+    location.href=pag;
   }
-}

@@ -15,11 +15,6 @@
     return view('welcome');
 });
 */
-
-Route::get('/inicio', function () {
-    return view('front.partes.index');
-});
-
 Route::resource('/','frontHomeController');
 
 Route::get('/contacto', function () {
@@ -45,8 +40,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('marcas','MarcasController');
    Route::resource('productos','ProductosController');
    Route::resource('mail','MailController');
-
-
 
    Route::PUT('usuario/{usuarios}', [
     'uses' => 'UsersController@actPass',

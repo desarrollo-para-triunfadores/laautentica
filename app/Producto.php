@@ -8,7 +8,7 @@ class Producto extends Model
 {
     protected $table =  "productos";
 
-    protected $fillable = ['nombre', 'descripcion', 'estado', 'costo', 'precio', 'tipoproducto_id', 'marca_id', 'localidad_id'];
+    protected $fillable = ['nombre', 'descripcion', 'estado', 'tipoproducto_id', 'marca_id', 'localidad_id'];
 
     public function tipoproducto() 
     {

@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <div class="note note-info">
+    <div class="note note-warning">
         <h4 class="box-heading">¡Atención!</h4>
         <p>Este elemento tiene asociados otros registros, primero debe eliminar esos registros y después podrá eliminar el mismo.</p>
     </div>               

@@ -50,28 +50,4 @@
             </div>
         </div>
     </div>
-</div>                                             
-<div class="form-group"><label class="col-sm-3 control-label">Costo</label>
-    <div class="col-sm-9 controls">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="input-icon right">
-                    <i class="fa fa-mobile"></i>
-                    {!! Form::number('costo', null, ['class' => 'form-control', 'placeholder' => 'campo opcional']) !!}                                
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="form-group"><label class="col-sm-3 control-label">Precio</label>
-    <div class="col-sm-9 controls">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="input-icon right">
-                    <i class="fa fa-mobile"></i>
-                    {!! Form::number('precio', null, ['class' => 'form-control', 'placeholder' => 'campo opcional']) !!}                                
-                </div>
-            </div>
-        </div>
-    </div>
 </div>

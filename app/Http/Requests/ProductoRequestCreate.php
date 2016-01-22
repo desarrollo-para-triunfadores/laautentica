@@ -29,7 +29,7 @@ class ProductoRequestCreate extends Request
             'tipoproducto_id' => 'required', 
             'localidad_id' => 'required', 
             'descripcion' => 'max:1000',      
-            'imagen' => 'mimes:jpeg,png|max:3072'
+            'imagen' => 'mimes:jpeg,png|required|max:3072'
         ];
     }
 }

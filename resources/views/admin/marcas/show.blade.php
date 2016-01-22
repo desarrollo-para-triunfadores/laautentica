@@ -41,6 +41,9 @@
                                     <h3>Detalles del Registro</h3>
                                     <br>
                                     @include('admin.partes.msjError')
+                                    @if (!($marca->estado))                                           
+                                        @include('admin.partes.recordatorioEstado')                                             
+                                    @endif                                     
                                     @include('flash::message') 
                                     <div class="row">
                                         <div class="col-md-12">
@@ -48,7 +51,7 @@
                                                 <div class="col-md-4">
                                                     @if ($marca->logo_marca->nombre === "sin imagen")                                           
                                                         <div class="form-group">
-                                                            <div class="text-center mbl"><img data-src="holder.js/350x250/text:Sin Logo" alt=""  class="img-thumbnail"/></div>
+                                                            <div class="text-center mbl"><img src="{{ asset('imagenes/marcas/sin-logo.jpg') }}" alt="" style="width:350px;height:250px" class="img-thumbnail"/></div>
                                                         </div>  
                                                     @else
                                                         <div class="form-group">
