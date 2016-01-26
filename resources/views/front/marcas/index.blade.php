@@ -7,7 +7,7 @@
 	<body>
 		@include('front.partes.cabeceraPartes')
 		<div id="modalProducto"></div>		
-		<div class="content-block parallax" id="parallax"></div><!-- #parallax -->
+		<div class="content-block parallax" id="parallax"></div>
 		<div id="wrapper">
 			<div class="content-block" id="portfolio">
 				<div class="container portfolio-sec">
