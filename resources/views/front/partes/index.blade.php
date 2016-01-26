@@ -67,19 +67,13 @@
 				</section>
 			</div>
 
-			@include('front.partes.quienesSomos')
+			@include('front.partes.aboutUs')
 
-@include('front.partes.marcas')
+			@include('front.partes.marcas')
 
-					@include('front.partes.productos')
-	
-
-
-
-
+			@include('front.partes.productos')
 
 			@include('front.partes.contacto')
-
 
 			@include('front.partes.pie')
 		</div><!--/#wrapper-->
