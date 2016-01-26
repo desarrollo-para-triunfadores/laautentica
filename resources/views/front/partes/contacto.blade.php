@@ -65,4 +65,7 @@
 							</div>
 						</div>
 				</div>
-			</div>
+		<!--Mapa de Google-->
+		<iframe src="https://mapsengine.google.com/map/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="1349" height="600"></iframe>
+
+	</div>

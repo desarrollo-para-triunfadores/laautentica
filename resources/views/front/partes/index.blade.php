@@ -8,6 +8,8 @@
 	<head>
 		<title>La Autentica Distribuidora SA - Resistencia-Chaco</title>
 		@include('front.partes.estilos')
+		<meta name="google-site-verification" content="81cd8OfnX69-tjBuieHrYmVULtWNb27AmwaQcJUUCco" />
+
 	</head>
 	
 	<body>
@@ -144,9 +146,7 @@
 
 			@include('front.partes.contacto')
 
-			<!--Mapa de Google-->
-			<iframe src="https://mapsengine.google.com/map/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="1349" height="600"></iframe>
-			
+
 			@include('front.partes.pie')
 		</div><!--/#wrapper-->
 	@include('front.partes.scripts')
