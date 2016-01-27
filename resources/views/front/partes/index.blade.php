@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="noIE" lang="en-US">
 	<head>
-		<title>La Autentica Distribuidora SA - Resistencia-Chaco</title>
+		<title>La Autentica Distribuidora S.R.L. - Resistencia-Chaco</title>
 		@include('front.partes.estilos')
 		<meta name="google-site-verification" content="81cd8OfnX69-tjBuieHrYmVULtWNb27AmwaQcJUUCco" />
 	</head>
@@ -62,7 +62,7 @@
 						La Autentica Distribuidora S.R.L.
 					</div>
 					<div class="secondary-slogan">
-						Un equipo responsable con la calidad que tu negocio necesita.
+						Un equipo responsable con la experiencia y calidad que tu negocio necesita.
 					</div>
 				</section>
 			</div>
@@ -73,8 +73,8 @@
 
 			@include('front.partes.productos')
 
+			@include('front.partes.mapa')
 			@include('front.partes.contacto')
-
 			@include('front.partes.pie')
 		</div><!--/#wrapper-->
 	@include('front.partes.scripts')

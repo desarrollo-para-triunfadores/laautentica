@@ -10,6 +10,7 @@
 				<p> </p>
 				<p> </p>
 			</div>
+
 			<div class="col-sm-4 blog-post">
 				<h2 class="footer-block">Dejenos su mensaje</h2>
 				<form action="contact-form.php" id="contactForm" method="post" name="contactform" class="" role="form">
@@ -19,6 +20,9 @@
 				    <div class="form-group">
 				    	<input type="email" class="form-control form-control-white" id="email" name="email" placeholder="Tu email" required>
 				    </div>
+					<div class="form-group">
+						<input type="telefono" class="form-control form-control-white" id="tel" name="telefono" placeholder="Teléfono (opcional)" >
+					</div>
 				    <div class="form-group">
 				    	<textarea class="form-control form-control-white" id="message" name="massage" placeholder="Deje aqui su mensaje.." required></textarea>
 				    </div>
@@ -51,6 +55,5 @@
 			</div>
 		</div>
 	</div>
-<!--Mapa de Google-->
-<iframe src="https://mapsengine.google.com/map/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="1349" height="600"></iframe>
+
 </div>

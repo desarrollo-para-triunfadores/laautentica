@@ -2,8 +2,12 @@
 	<div class="container about-sec">
 		<header class="block-heading cleafix">
 			<div class="title-page">
+
 				<p class="main-header">Quienes somos</p>
-				<p class="sub-header"></p>
+				<p class="sub-header">
+					<link rel="stylesheet" href="style.css">
+					<a href="/institucional" target="_blank">Conozca mas</a>
+				</p>
 			</div>
 		</header>
 		<div class="divide50"></div>
@@ -19,7 +23,7 @@
 				<div class="aboutus-item">
 					<i class="aboutus-icon fa fa-thumbs-up"></i>
 					<h4 class="aboutus-title">Garantia de conformidad</h4>
-					<p class="aboutus-desc">Mas de veinte años en el rubro abalan nuestro compromiso con nuestros clientes</p>
+					<p class="aboutus-desc">Mas de veinte a&ntildeos en el rubro abalan nuestro compromiso con nuestros clientes</p>
 				</div>
 			</div>
 			<div class="col-md-4 text-center">
