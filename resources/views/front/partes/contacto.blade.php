@@ -6,19 +6,27 @@
 			<br>
 			<div class="col-sm-4 blog-post">				
 				<h2 class="footer-block">Tiene preguntas, consultas?</h2>
-				<p>Dejenos su email y le adjuntaremos un catalogo de productos a la brevedad.</p>
+				<p>Dejenos su email o teléfono de contacto y le adjuntaremos un catalogo de productos a la brevedad.</p><p> </p><p> </p>
 				<p> </p>
-				<p> </p>
+				<p> </p><p>
+
+
+
+				</p><p>
+				<h3 class="modal-content thumbnail" style="background-color: #f5e79e"><p><b>HORARIO DE ATENCIÓN:</b></p>
+					<p>Lunes a Viernes de 8 a 12hs y 17 a 19hs</p>
+					<p> </p></h3>
+
 			</div>
 
 			<div class="col-sm-4 blog-post">
 				<h2 class="footer-block">Dejenos su mensaje</h2>
 							<div class="form-group">
-								<div class="panel-heading"><h3 class="panel-title"></h3></div>
+								<!--<div class="panel-heading"><h3 class="panel-title"></h3></div>-->
 								<div class="panel-body">
 									{!! Form::open(['route' => 'mail.store', 'method' => 'post']) !!}
 									<div class="form-group">
-										{!! Form::text('name', null, array('class' => 'from-control', 'placeholder' => '   Su nombre..')) !!}
+										{!! Form::text('name', null ,array('class' => 'form-control', 'placeholder' => 'Su nombre..')) !!}
 									</div>
 									<div class="form-group">
 										{!! Form::email('email', null ,array('class' => 'form-control', 'placeholder' => 'Su email..')) !!}
@@ -27,7 +35,7 @@
 										{!! Form::tel('telefono', null, array('class' => 'form-control', 'placeholder' => 'Su telefono (no obligatorio)')) !!}
 									</div>
 									<div class="form-group">
-										{!! Form::textarea('mensaje', null, ['class' => 'form-control', 'placeholder' => 'Mensaje' ]) !!}
+										{!! Form::textarea('mensaje', null, ['class' => 'form-control', 'rows' => '3', 'placeholder' => 'Mensaje' ]) !!}
 									</div>
 
 									<div class="form-group">
@@ -37,6 +45,7 @@
 								</div>
 							</div>
 			</div>
+
 
 			<div class="col-sm-4 blog-post">
 				<h2 class="footer-block">Detalles de Contacto</h2>

@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="noIE" lang="es-AR">
 <head>
     <header class="block-heading cleafix">
 

@@ -40,6 +40,12 @@ class frontHomeController extends Controller
         //
     }
 
+    public function mantenimiento()
+    {
+        Flash::overlay('Bien! su mensaje se envio correctamente');
+        return Redirect::to('/');
+    }
+
     /**
      * Display the specified resource.
      *

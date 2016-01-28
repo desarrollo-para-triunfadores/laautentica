@@ -6,20 +6,15 @@
 		<meta name="google-site-verification" content="81cd8OfnX69-tjBuieHrYmVULtWNb27AmwaQcJUUCco" />
 	</head>
 
-
-
-
-
 <body>
+@include('front.partes.analyticstracking')
 
-    <header class="top-header">
+<header class="top-header">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-xs-5 col-sm-4 header-logo">
                     <br>
-                    <a href="index.html">
                         <h1 class="logo">La Autentica <span class="logo-head"></span></h1>
-                    </a>
                 </div>
                 <div class="col-md-8 col-md-offset-1 col-xs-7">
                     <nav class="navbar navbar-default">
@@ -41,10 +36,10 @@
                                         <a href="#about"><i class="fa fa-bookmark"></i> Acerca de nosotros</a>
                                     </li>
                                     <li>
-                                        <a href="#parallax"><i class="fa fa-registered"></i> Marcas</a>
+                                        <a href="#marcas"><i class="fa fa-registered"></i> Marcas</a>
                                     </li>
                                     <li>
-                                        <a href="#productos"><i class="fa fa-beer"></i> Productos</a>
+                                        <a href="#productos"><i class="fa fa-shopping-cart"></i> Productos</a>
                                     </li>
                                     <li>
                                         <a href="#footer"><i class="fa fa-phone"></i> Contacto</a>
@@ -62,7 +57,6 @@
     </header>
 
 
-	@include('flash::message')
     <div id="wrapper">
         <div id="header" class="content-block">
 
@@ -75,6 +69,9 @@
                 </div>
             </section>
         </div>
+        <h2 class="modal-content thumbnail" style="background-color: #f5e79e"><p><b>Sitio web en construcci&oacuten</b></p>
+            <p></p>
+            <p> </p></h2>
 
         @include('front.partes.aboutUs')
 
@@ -88,5 +85,13 @@
     </div><!--/#wrapper-->
 @include('front.partes.scripts')
 	<script>$('#flash-overlay-modal').modal();</script>
+
+    <script>
+        function myFunction() {
+            alert("Este sitio web se encuentra en reparacion!");
+        }
+    </script>
+
+
 </body>
 </html>

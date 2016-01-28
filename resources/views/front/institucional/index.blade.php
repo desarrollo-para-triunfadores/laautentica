@@ -5,8 +5,9 @@
 		@include('front.partes.estilos')
 	</head>
 	<body>
+
 		@include('front.partes.cabeceraPartes')
-				<div class="content-block juampy " id="parallax"></div><!-- #parallax -->
+				<div class="content-block parallax " id="parallax"></div><!-- #parallax -->
 
 		<!--Carrouselirijillo-->
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -25,7 +26,7 @@
 							<h1>La Autentica Distribuidora S.R.L.</h1>
 							<p>LA Distribuidora Mayorista...
 							</p>
-							<p><a class="btn btn-lg btn-primary" href="#" role="button">Ordenar Catalogo</a></p>
+							<p><a class="btn btn-lg btn-primary" href="/contacto" role="button">Ordenar Catalogo</a></p>
 						</div>
 					</div>
 					</img>

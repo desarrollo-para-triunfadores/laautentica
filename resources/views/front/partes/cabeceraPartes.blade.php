@@ -31,7 +31,7 @@
 									<a href="" onclick="redirigir('{{ route('marcas.index') }}');"><i class="fa fa-registered"></i> Marcas</a>
 								</li>
 								<li>
-									<a href="" onclick="redirigir('{{ route('productos.index') }}');"><i class="fa fa-beer"></i> Productos</a>
+									<a href="" onclick="redirigir('{{ route('productos.index') }}');"><i class="fa fa-shopping-cart"></i> Productos</a>
 								</li>										
 								<li>
 									<a href="" onclick="redirigir('/contacto');"><i class="fa fa-phone"></i> Contacto</a>

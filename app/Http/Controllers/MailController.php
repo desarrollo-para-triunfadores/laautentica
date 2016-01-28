@@ -55,6 +55,12 @@ class MailController extends Controller
         //
     }
 
+    public function sitioReparacion()
+    {
+        Flash::overlay('Bien! su mensaje se envio correctamente');
+        return Redirect::to('/');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
