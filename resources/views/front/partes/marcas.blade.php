@@ -1,5 +1,5 @@
 
-<div class="content-block parallax" id="marcas">
+<div class="content-block parallax2" id="parallax2">
 	<div class="container">
 		<div class="row">
 		<br>

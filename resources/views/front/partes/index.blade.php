@@ -36,7 +36,7 @@
                                         <a href="#about"><i class="fa fa-bookmark"></i> Acerca de nosotros</a>
                                     </li>
                                     <li>
-                                        <a href="#marcas"><i class="fa fa-registered"></i> Marcas</a>
+                                        <a href="#parallax2"><i class="fa fa-registered"></i> Marcas</a>
                                     </li>
                                     <li>
                                         <a href="#productos"><i class="fa fa-shopping-cart"></i> Productos</a>
@@ -83,15 +83,13 @@
         @include('front.partes.contacto')
         @include('front.partes.pie')
     </div><!--/#wrapper-->
-@include('front.partes.scripts')
+    @include('front.partes.scripts')
+    @yield('script')
 	<script>$('#flash-overlay-modal').modal();</script>
-
     <script>
         function myFunction() {
             alert("Este sitio web se encuentra en reparacion!");
         }
     </script>
-
-
 </body>
 </html>

@@ -1,3 +1,4 @@
+<div id="modalProducto"></div>  
 <div class="content-block" id="productos">
     <div class="container portfolio-sec">
         <header class="block-heading cleafix">
@@ -10,3 +11,11 @@
         @include('front.productos.contenidoTabla')
     </div>
 </div>
+<button id="boton-modal" class="hide" data-toggle="modal" data-target=".bs-example-modal-lg"></button>
+
+@section('script') 
+<script src="{{ asset('js/productos.js') }}"></script>
+<script>
+    var route = "/productos";
+</script>
+@endsection
