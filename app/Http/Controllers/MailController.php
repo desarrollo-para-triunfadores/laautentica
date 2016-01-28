@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Mail;
+use Session;
+use Redirect;
+use Laracasts\Flash\Flash;
+
 class MailController extends Controller
 {
     /**
@@ -16,28 +21,27 @@ class MailController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+
+        Mail::send('emails.contact', $request->all(), function($msj){
+            $msj->subject('Correo de contacto');
+            $msj->to('jpaulnava@gmail.com');
+        });
+
+        Flash::overlay('Bien! su mensaje se envio correctamente');
+
+        return Redirect::to('/');
     }
 
     /**

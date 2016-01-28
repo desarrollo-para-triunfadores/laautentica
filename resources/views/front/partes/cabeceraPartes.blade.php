@@ -39,6 +39,9 @@
 								<li>
 									<a href="" onclick="redirigir('{{ route('admin.auth.login') }}');"><i class="fa fa-sign-in"></i> Ingresar</a>
 								</li>
+								<li>
+
+								</li>
 					      	</ul>
 					    </div>
 				  	</div>

@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'laautentica.pag@gmail.com', 'name' => 'Correo generado por la web de "La Auténtica SRL"'],
+    'from' => ['address' => 'jpaulmava@gmail.com', 'name' => 'Correo generado por LaAutentica.com.ar'],
 
     /*
     |--------------------------------------------------------------------------

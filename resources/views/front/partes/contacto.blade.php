@@ -13,25 +13,31 @@
 
 			<div class="col-sm-4 blog-post">
 				<h2 class="footer-block">Dejenos su mensaje</h2>
-				<form action="contact-form.php" id="contactForm" method="post" name="contactform" class="" role="form">
-					<div class="form-group">
-				    	<input type="text" class="form-control form-control-white" id="name" name="name" placeholder="Nombre" required>
-				  	</div>
-				    <div class="form-group">
-				    	<input type="email" class="form-control form-control-white" id="email" name="email" placeholder="Tu email" required>
-				    </div>
-					<div class="form-group">
-						<input type="telefono" class="form-control form-control-white" id="tel" name="telefono" placeholder="Teléfono (opcional)" >
-					</div>
-				    <div class="form-group">
-				    	<textarea class="form-control form-control-white" id="message" name="massage" placeholder="Deje aqui su mensaje.." required></textarea>
-				    </div>
-				    <div id="contactFormResponse"></div>
-				    <div class="form-group">
-				    	<input id="cfsubmit" type="submit" class="text-center btn btn-o-white" value="Enviar">
-				  	</div>
-				</form>
+							<div class="form-group">
+								<div class="panel-heading"><h3 class="panel-title"></h3></div>
+								<div class="panel-body">
+									{!! Form::open(['route' => 'mail.store', 'method' => 'post']) !!}
+									<div class="form-group">
+										{!! Form::text('name', null, array('class' => 'from-control', 'placeholder' => '   Su nombre..')) !!}
+									</div>
+									<div class="form-group">
+										{!! Form::email('email', null ,array('class' => 'form-control', 'placeholder' => 'Su email..')) !!}
+									</div>
+									<div class="form-group">
+										{!! Form::tel('telefono', null, array('class' => 'form-control', 'placeholder' => 'Su telefono (no obligatorio)')) !!}
+									</div>
+									<div class="form-group">
+										{!! Form::textarea('mensaje', null, ['class' => 'form-control', 'placeholder' => 'Mensaje' ]) !!}
+									</div>
+
+									<div class="form-group">
+										{!! Form::submit('Enviar', ['class' => 'btn btn-o-white' ] ) !!}
+									</div>
+									{!! Form::close() !!}
+								</div>
+							</div>
 			</div>
+
 			<div class="col-sm-4 blog-post">
 				<h2 class="footer-block">Detalles de Contacto</h2>
 				<ul>
@@ -49,9 +55,6 @@
 							<a href="mailto:{{ $empresa->email }}" target="_top">{{ $empresa->email }}</a>
 						</p>
 				</ul>
-				<div class="social">
-					<a href="https://www.facebook.com/La-Autentica-Distribuidora-579709592177010"><i class="fa fa-facebook"></i></a>
-				</div>				
 			</div>
 		</div>
 	</div>

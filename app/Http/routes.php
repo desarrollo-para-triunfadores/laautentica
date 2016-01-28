@@ -39,13 +39,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
    Route::resource('rubros','RubrosController');
    Route::resource('marcas','MarcasController');
    Route::resource('productos','ProductosController');
-   Route::resource('mail','MailController');
+
 
    Route::PUT('usuario/{usuarios}', [
     'uses' => 'UsersController@actPass',
     'as' => 'usuario.actpass'
     ]);
 });
+
+Route::resource('mail','MailController');
 
 // Authentication routes...
 Route::get('admin/auth/login', [

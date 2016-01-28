@@ -6,11 +6,9 @@
 	</head>
 	<body>
 		@include('front.partes.cabeceraPartes')
-				<div class="content-block parallax " id="parallax"></div><!-- #parallax -->
+				<div class="content-block juampy " id="parallax"></div><!-- #parallax -->
 
-		<div id="about" class="about-us">
-
-
+		<!--Carrouselirijillo-->
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -25,7 +23,7 @@
 					<div class="container">
 						<div class="carousel-caption">
 							<h1>La Autentica Distribuidora S.R.L.</h1>
-							<p><code></code>
+							<p>LA Distribuidora Mayorista...
 							</p>
 							<p><a class="btn btn-lg btn-primary" href="#" role="button">Ordenar Catalogo</a></p>
 						</div>
@@ -37,9 +35,9 @@
 					<div class="container">
 
 						<div class="carousel-caption">
-							<h1></h1>
-							<p></p>
-							<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+							<h1>Flota renovada de transporte de sustencias.</h1>
+							<p>Nos renovamos constantemente para optimizar nuestros servicios</p>
+							<!--Boton <p><a class="btn btn-lg btn-primary" href="#" role="button"></a></p>-->
 						</div>
 					</div>
 				</div>
@@ -48,9 +46,9 @@
 					<div class="container">
 						<div class="carousel-caption">
 							<h1>Mision</h1>
-							<p>Ser su aliado estrategico creciendo dia a dia, para garantizar a nuestra distinguidos clientes lo Mejor en servicio y Calidad.
+							<p>Ser su aliado estrategico creciendo dia a dia, garantizando a nuestra distinguidos clientes lo mejor en servicio y calidad.
 							</p>
-							<p><a class="btn btn-lg btn-primary" href="#" role="button">Ver Marcas</a></p>
+							<p><a class="btn btn-lg btn-primary" href="{{ route('marcas.index') }}" role="button">Ver Marcas</a></p>
 						</div>
 					</div>
 				</div>
@@ -66,12 +64,21 @@
 			</a>
 			-->
 		</div><!-- /.carousel -->
+
+
+		<div id="about" class="about-us">
+			@include('front.institucional.origenes')
+		</div>
+
+		<div id="about" class="about-us">
+			@include('front.institucional.experiencia')
 		</div>
 
 
-		@include('front.institucional.origenes')
-		@include('front.institucional.experiencia')
-		@include('front.institucional.proveedores')
+		<div id="about" class="about-us">
+			@include('front.institucional.proveedores')
+		</div>
+
 
 		@include('front.partes.pie')
 		@include('front.partes.scripts')

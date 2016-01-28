@@ -7,7 +7,7 @@
 <style>
         .google-maps {
                 position: relative;
-                padding-bottom: 75%; // This is the aspect ratio
+                padding-bottom: 30%; // This is the aspect ratio
         height: 0;
                 overflow: hidden;
         }
@@ -21,5 +21,5 @@
 </style>
 
 <div class="google-maps">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="1200" height="480"></iframe>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=zKZOQhecH1Us.k3FbMRNUYsp0" width="100" height="480"></iframe>
 </div>
