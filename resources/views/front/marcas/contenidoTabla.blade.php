@@ -7,13 +7,31 @@
 		        @if ($marca->logo_marca->nombre === "sin imagen")
 		            <div class="col-sm-4">
 						<a class="recent-work " href="{{ route('marcas.show', $marca->id) }}" style="background-image:url({{ asset('imagenes/marcas/sin-logo.jpg') }})">
-							<span class="btn btn-o-white">Ver todos los productos {{ $marca->nombre }}</span>
+							<span class="btn btn-o-white">Ver todos los productos 
+                                <?php 
+                                    if (strlen($marca->nombre)>20) {
+                                       echo (substr($marca->nombre , 0, 20)."...");
+                                    }                                                                                   
+                                    else {
+                                      echo ($marca->nombre);
+                                    }
+                                ?>
+							</span>
 						</a>
 					</div>							
 		    	@else
 		            <div class="col-sm-4">
 						<a class="recent-work" href="{{ route('marcas.show', $marca->id) }}" style="background-image:url({{ asset('imagenes/marcas/' . $marca->logo_marca->nombre) }})">
-							<span class="btn btn-o-white">Ver todos los productos {{ $marca->nombre }}</span>
+							<span class="btn btn-o-white">Ver todos los productos 
+                                <?php 
+                                    if (strlen($marca->nombre)>20) {
+                                       echo (substr($marca->nombre , 0, 20)."...");
+                                    }                                                                                   
+                                    else {
+                                      echo ($marca->nombre);
+                                    }
+                                ?>
+							</span>
 						</a>
 					</div>
 		    	@endif   

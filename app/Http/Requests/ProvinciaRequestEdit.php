@@ -31,7 +31,7 @@ class ProvinciaRequestEdit extends Request
     public function rules()
     {
         return [            
-            'nombre' => 'required|max:20|unique:provincias,nombre,'.$this->route->getParameter('provincias'),
+            'nombre' => 'required|max:100|unique:provincias,nombre,'.$this->route->getParameter('provincias'),
             'pais_id' => 'required' 
         ];
     }

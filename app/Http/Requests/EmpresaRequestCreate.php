@@ -24,15 +24,15 @@ class EmpresaRequestCreate extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|max:20|unique:empresas',
-            'celular' => 'max:20',
-            'telefono' => 'max:20',
-            'calle' => 'required|max:30',
+            'nombre' => 'required|max:100|unique:empresas',
+            'celular' => 'max:30',
+            'telefono' => 'max:30',
+            'calle' => 'required|max:50',
             'altura' => 'required|max:10',
             'localidad_id' => 'required',
             'rubro_id' => 'required',
-            'email' => 'email|max:40',  
-            'web'  => 'active_url|max:40',       
+            'email' => 'email|max:100',  
+            'web'  => 'active_url|max:100',       
             'imagen' => 'mimes:jpeg,png|max:3072'
         ];
     }

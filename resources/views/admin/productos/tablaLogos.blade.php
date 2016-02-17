@@ -18,7 +18,16 @@
                         <div class="col-md-3">
                             @if ($producto->logo_producto->nombre === "sin imagen")
                                  <div class="thumbnail"><img class="img-rounded" style="width:300px;height:200px" src="{{ asset('imagenes/productos/sin-logo.jpg') }}"/>
-                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>{{ $producto->nombre }}</h3></a>                                                
+                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>
+                                        <?php 
+                                            if (strlen($producto->nombre)>20) {
+                                               echo (substr($producto->nombre , 0, 20)."...");
+                                            }                                                                                   
+                                            else {
+                                              echo ($producto->nombre);
+                                            }
+                                        ?>
+                                        </h3></a>                                                
                                         <p> <h4>Marca: {{ $producto->marca->nombre }}</h4> </p> 
                                         @if ($producto->estado)
                                              <p> <span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 
@@ -30,7 +39,16 @@
                                 </div>
                             @else
                                 <div class="thumbnail"><img class="img-rounded" style="width:300px;height:200px" src="{{ asset('imagenes/productos/' . $producto->logo_producto->nombre) }}"/>
-                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>{{ $producto->nombre }}</h3></a>                                                                                                 
+                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.productos.show', $producto->id) }}"> <h3>
+                                        <?php 
+                                            if (strlen($producto->nombre)>20) {
+                                               echo (substr($producto->nombre , 0, 20)."...");
+                                            }                                                                                   
+                                            else {
+                                              echo ($producto->nombre);
+                                            }
+                                        ?>
+                                    </h3></a>                                                                                                 
                                         <p> <h4>Marca: {{ $producto->marca->nombre }}</h4> </p> 
                                         @if ($producto->estado)
                                              <p> <span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span> Origen: {{ $producto->localidad->nombre }} - {{ $producto->localidad->provincia->pais->nombre }}</p>                                                 

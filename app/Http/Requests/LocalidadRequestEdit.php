@@ -31,7 +31,7 @@ class LocalidadRequestEdit extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|max:20|unique:localidades,nombre,'.$this->route->getParameter('localidades'),
+            'nombre' => 'required|max:100|unique:localidades,nombre,'.$this->route->getParameter('localidades'),
             'provincia_id' => 'required'
         ];
     }

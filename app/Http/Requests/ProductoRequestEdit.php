@@ -29,7 +29,7 @@ class ProductoRequestEdit extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|max:20|unique:productos,nombre,'.$this->route->getParameter('productos'),
+            'nombre' => 'required|max:100|unique:productos,nombre,'.$this->route->getParameter('productos'),
             'marca_id' => 'required', 
             'tipoproducto_id' => 'required', 
             'localidad_id' => 'required', 

@@ -18,7 +18,16 @@
                         <div class="col-md-3">
                             @if ($marca->logo_marca->nombre === "sin imagen")
                                <div class="thumbnail"><img class="img-rounded" style="width:300px;height:200px" src="{{ asset('imagenes/marcas/sin-logo.jpg') }}"/>
-                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.marcas.show', $marca->id) }}"> <h3>{{ $marca->nombre }}</h3></a>                                                
+                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.marcas.show', $marca->id) }}"> <h3>   
+                                        <?php 
+                                            if (strlen($marca->nombre)>20) {
+                                               echo (substr($marca->nombre , 0, 17)."...");
+                                            }                                                                                   
+                                            else {
+                                              echo ($marca->nombre);
+                                            }
+                                        ?>
+                                    </h3></a>                                                
                                         <h4><p>Empresa: {{ $marca->empresa->nombre }}</p></h4>   
                                         @if ($marca->estado)
                                             <p><span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span>Cantidad de Productos: {{ $marca->productos->count() }} </p> 
@@ -29,7 +38,16 @@
                                 </div>
                             @else
                                 <div class="thumbnail"><img class="img-rounded" style="width:300px;height:200px" src="{{ asset('imagenes/marcas/' . $marca->logo_marca->nombre) }}"/>
-                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.marcas.show', $marca->id) }}"> <h3>{{ $marca->nombre }}</h3></a>                                                
+                                    <div class="caption"><a data-toggle="tooltip" data-placement="left" title="Visualizar registro. Al visualizar este registro podrá acceder acciones como edición y eliminación del mismo" href="{{ route('admin.marcas.show', $marca->id) }}"> <h3>
+                                        <?php 
+                                            if (strlen($marca->nombre)>20) {
+                                               echo (substr($marca->nombre , 0, 17)."...");
+                                            }                                                                                   
+                                            else {
+                                              echo ($marca->nombre);
+                                            }
+                                        ?>
+                                    </h3></a>                                                
                                        <h4><p>Empresa: {{ $marca->empresa->nombre }}</p></h4>   
                                         @if ($marca->estado)
                                             <p><span class="label label-success"><i class="fa fa-thumbs-o-up"></i></span> Cantidad de Productos: {{ $marca->productos->count() }} </p> 

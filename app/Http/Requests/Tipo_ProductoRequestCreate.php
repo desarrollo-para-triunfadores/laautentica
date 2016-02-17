@@ -24,7 +24,7 @@ class Tipo_ProductoRequestCreate extends Request
     public function rules()
     {
          return [
-            'nombreTipo' => 'required|max:20|unique:tiposproductos'            
+            'nombreTipo' => 'required|max:100|unique:tiposproductos'            
         ];
     }
 }

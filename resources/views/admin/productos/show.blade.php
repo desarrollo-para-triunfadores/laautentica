@@ -78,11 +78,12 @@
                                                             <tbody>                                                       
                                                                 <tr>
                                                                     <td class="text-center"><h4 class="box-heading">Nombre:</h4></td>
-                                                                    <td class="text-center"><h4>{{ $producto->nombre }}</h4></td>
+                                                                    <td class="text-center"><h4>{{ $producto->nombre }}</h4></td>                                                   
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="text-center"><h4 class="box-heading">Marca:</h4></td>                                                                    
                                                                     <td class="text-center"><h4>{{ $producto->marca->nombre }}</h4></td>
+
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="text-center"><h4 class="box-heading">Tipo de Producto:</h4></td>         

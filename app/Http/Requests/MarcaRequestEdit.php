@@ -30,7 +30,7 @@ class MarcaRequestEdit extends Request
     public function rules()
     {
         return [            
-            'nombre' => 'required|max:20|unique:marcas,nombre,'.$this->route->getParameter('marcas'),
+            'nombre' => 'required|max:100|unique:marcas,nombre,'.$this->route->getParameter('marcas'),
             'empresa_id' => 'required',
             'imagen' => 'mimes:jpeg, png|max:3072' 
         ];

@@ -24,7 +24,7 @@ class PaisRequestCreate extends Request
     public function rules()
     {
         return [
-            'nombre' => 'required|max:20|unique:paises'            
+            'nombre' => 'required|max:100|unique:paises'            
         ];
     }
 }

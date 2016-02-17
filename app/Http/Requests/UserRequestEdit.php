@@ -31,8 +31,8 @@ class UserRequestEdit extends Request
     public function rules()
     {
         return [
-            'name' => 'required|max:30',
-            'email' => 'required|email|max:40|unique:users,email,'.$this->route->getParameter('usuarios'),
+            'name' => 'required|max:200',
+            'email' => 'required|email|max:100|unique:users,email,'.$this->route->getParameter('usuarios'),
             'imagen' => 'image|max:3072' 
         ];
     }

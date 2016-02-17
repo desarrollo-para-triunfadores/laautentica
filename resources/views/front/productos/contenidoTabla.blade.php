@@ -7,13 +7,31 @@
 		        @if ($producto->logo_producto->nombre === "sin imagen")
 		            <div class="col-sm-4">
 						<a class="recent-work " onclick="cargarModal({{ $producto->id }})" style="background-image:url({{ asset('imagenes/productos/sin-logo.jpg') }})">
-							<span class="btn btn-o-white"> ver detalle - {{ $producto->nombre }}</span>
+							<span class="btn btn-o-white"> ver detalle - 
+                                <?php 
+                                    if (strlen($producto->nombre)>20) {
+                                       echo (substr($producto->nombre , 0, 20)."...");
+                                    }                                                                                   
+                                    else {
+                                      echo ($producto->nombre);
+                                    }
+                                ?>
+                            </span>
 						</a>
 					</div>							
 		    	@else
 		            <div class="col-sm-4">
 						<a class="recent-work" onclick="cargarModal({{ $producto->id }})" style="background-image:url({{ asset('imagenes/productos/' . $producto->logo_producto->nombre) }})">
-							<span class="btn btn-o-white"> ver detalle - {{ $producto->nombre }}</span>
+							<span class="btn btn-o-white"> ver detalle - 
+                                <?php 
+                                    if (strlen($producto->nombre)>20) {
+                                       echo (substr($producto->nombre , 0, 20)."...");
+                                    }                                                                                   
+                                    else {
+                                      echo ($producto->nombre);
+                                    }
+                                ?>
+                            </span>							
 						</a>
 					</div>
 		    	@endif   

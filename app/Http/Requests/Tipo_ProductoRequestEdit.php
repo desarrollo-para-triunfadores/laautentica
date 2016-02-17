@@ -29,7 +29,7 @@ class Tipo_ProductoRequestEdit extends Request
     public function rules()
     {
         return [
-             'nombreTipo' => 'required|max:30|unique:tiposproductos, nombreTipo,'.$this->route->getParameter('tipos_productos')
+             'nombreTipo' => 'required|max:100|unique:tiposproductos, nombreTipo,'.$this->route->getParameter('tipos_productos')
         ];
     }
 }
