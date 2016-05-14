@@ -7,7 +7,28 @@
 	ga('create', 'UA-65677009-1', 'auto');
 	ga('send', 'pageview');
 
+
+	<!--Script para que el mapa no tenga zoom-->
+	var map;
+
+	function load() {
+		if (GBrowserIsCompatible()) {
+			map = new GMap2(document.getElementById("map"));
+			map.setCenter(new GLatLng(10.014714, 76.343836), 13);
+			document.getElementById("map").checked = true;
+			toggleZoom(false);
+		}
+	}
+
+	function toggleZoom(isChecked) {
+		if (isChecked) {
+			map.enableScrollWheelZoom();
+		} else {
+			map.disableScrollWheelZoom();
+		}
+	}
 </script>
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{{asset('plantillas/Avada/assets/js/jquery-2.1.3.min.js') }}"> </script>
@@ -25,4 +46,6 @@
 
 
 <script src="{{ asset('js/busquedaFront.js') }}"></script>
+
+
 

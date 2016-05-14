@@ -94,6 +94,7 @@ class RubrosController extends Controller
         $this->rubro->save();
         Flash::success("Se ha realizado la actualización del registro: ".$this->rubro->nombre.".");
         return redirect()->route('admin.rubros.show', $id);
+
     }
 
     /**

@@ -62,6 +62,7 @@
 
             <section class="center">
                 <div class="slogan">
+                    <br><br><br><br><br><br><br><br><br><br>
                     La Autentica Distribuidora S.R.L.
                 </div>
                 <div class="secondary-slogan">
@@ -74,18 +75,16 @@
             <p> </p></h2>
 
         @include('front.partes.aboutUs')
-
         @include('front.partes.marcas')
-
         @include('front.partes.productos')
-
-        @include('front.partes.mapa')
-        @include('front.partes.contacto')
+        @include('front.partes.contacto')  <!-- mapa esta dentro de contacto-->
         @include('front.partes.pie')
     </div><!--/#wrapper-->
+
+
     @include('front.partes.scripts')
     @yield('script')
-	<script>$('#flash-overlay-modal').modal();</script>
+
     <script>
         function myFunction() {
             alert("Este sitio web se encuentra en reparacion!");
