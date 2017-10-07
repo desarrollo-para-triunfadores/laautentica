@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="noIE" lang="es-AR">
 	<head>
-		<title>La Autentica Distribuidora SA - Resistencia-Chaco</title>
+		<title>La Autentica Distribuidora SA - Resistencia Chaco</title>
 		@include('front.partes.estilos')
 	</head>
 	<body>

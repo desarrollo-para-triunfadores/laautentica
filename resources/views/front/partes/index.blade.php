@@ -70,13 +70,16 @@
                 </div>
             </section>
         </div>
-        <h2 class="modal-content thumbnail" style="background-color: #f5e79e"><p><b>Sitio web en construcci&oacuten</b></p>
+<!--        <h2 class="modal-content thumbnail" style="background-color: #f5e79e"><p><b>Sitio web en construcci&oacuten</b></p>
             <p></p>
-            <p> </p></h2>
+            <p> </p></h2>-->
 
         @include('front.partes.aboutUs')
         @include('front.partes.marcas')
         @include('front.partes.productos')
+         
+             @include('front.partes.mapa')
+        
         @include('front.partes.contacto')  <!-- mapa esta dentro de contacto-->
         @include('front.partes.pie')
     </div><!--/#wrapper-->
